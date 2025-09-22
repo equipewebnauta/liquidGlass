@@ -1,0 +1,2371 @@
+
+/* INICIO LIQUID GLASS */
+
+/* Garante que o fundo ocupe toda a tela */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://plataforma.sinpefesp.net/wp-content/uploads/2025/09/bg-page2-min.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    overflow-x: hidden; /* evita "scroll" lateral */
+}
+
+/* Remove qualquer fundo branco dos elementos principais */
+
+/* Opcional: aplicar glassmorphism em containers principais */
+.container,
+.wrapper,
+.mycourses_header,
+.vibebp_left_sidebar_wrapper {
+    background: rgba(255,255,255,0.15) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: all 0.3s ease;
+}
+
+
+
+
+.vibebp_main {
+background: transparent;
+}
+
+
+
+
+/* Hover suave */
+.course_blocks .course_block_wrap:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove fundos brancos internos */
+.course_blocks .course_block_wrap * {
+    background: transparent !important;
+}
+
+/* Imagens dos cursos */
+.course_blocks .course_featured_image img {
+    border-radius: 12px 0 0 ;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* Labels de status */
+.course_blocks .course_label span.active {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+
+
+/* Botões */
+.course_blocks .course_block_actions .button {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.course_blocks .course_block_actions .button:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+    transform: translateY(-2px);
+}
+
+/* Fundo principal do cabeçalho dos cursos */
+.mycourses_header {
+    background: rgba(255, 255, 255, 0.15) !important; /* translúcido */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hover suave (opcional) */
+.mycourses_header:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove fundos brancos internos */
+.mycourses_header * {
+    background: transparent !important;
+}
+
+/* Botões de abas */
+.mycourses_access_tabs .button {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin-right: 8px;
+    transition: all 0.3s ease;
+}
+
+.mycourses_access_tabs .button.active,
+.mycourses_access_tabs .button:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+    transform: translateY(-2px);
+}
+
+/* Inputs de busca */
+.mycourses_header .searchbox input {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 8px;
+    padding: 8px 12px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.mycourses_header .searchbox input:focus {
+    background: rgba(255, 255, 255, 0.25) !important;
+    outline: none;
+}
+
+/* Selects */
+.mycourses_header select {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 8px;
+    padding: 8px 12px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.mycourses_header select:focus {
+    background: rgba(255, 255, 255, 0.25) !important;
+    outline: none;
+}
+
+
+/* Fundo principal do menu de perfil */
+.profile_menu {
+    background: rgba(255, 255, 255, 0.15) !important; /* translúcido */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 15px !important;
+   padding:10px;
+}
+
+
+
+/* Remove fundos brancos internos de todos os elementos */
+.profile_menu * {
+    background: transparent !important;
+}
+
+/* Logo do site */
+.profile_menu .site_logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 16px;
+}
+
+/* Itens do menu */
+.profile_menu .menu_items .bp-menu,
+.profile_menu .todos-cursos,
+.profile_menu .inicio {
+    display: flex;
+    align-items:center ;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+/* Hover dos itens do menu */
+.profile_menu .menu_items .bp-menu:hover,
+.profile_menu .todos-cursos:hover,
+.profile_menu .inicio:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+    transform: translateY(-1px);
+}
+
+/* Ícones dentro do menu */
+.profile_menu .menu_items svg {
+    fill: #ffffff;
+}
+
+/* Textos dos itens */
+.profile_menu .menu_items span span:last-child {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Menu inferior (modo escuro, sair) */
+.profile_menu .menu_bottom {
+    margin-top: 16px;
+}
+
+.menu_items .icon {
+  margin-left: -11px !important;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.inicio .vicon-new-window {
+  margin-left: -11px !important;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.profile_menu .menu_bottom .menu_item {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+    background: rgba(255,255,255,0.1) !important;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile_menu .menu_bottom .menu_item:hover {
+    background: rgba(255,255,255,0.25) !important;
+    transform: translateY(-1px);
+}
+
+.profile_menu .menu_bottom .menu_item svg {
+    fill: #ffffff;
+    margin-right: 6px;
+}
+
+
+/* Fundo principal de todos os blocos */
+.course_blocks .course_block_wrap {
+    background: rgba(255, 255, 255, 0.15) !important; /* translúcido */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover suave */
+.course_blocks .course_block_wrap:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove fundos brancos internos */
+.course_blocks .course_block_wrap * {
+    background: transparent !important;
+}
+
+/* Imagens dos cursos */
+.course_blocks .course_featured_image img {
+    border-radius: 12px;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+/* Labels de status */
+.course_blocks .course_label span.active {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+
+/* Botões */
+.course_blocks .course_block_actions .button {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.course_blocks .course_block_actions .button:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   Liquid Glass - Bloco de curso Vibebp
+   ============================== */
+.vibebp_course .course_card .courseitem {
+    background: rgba(255, 255, 255, 0.15) !important; /* translúcido */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Hover suave */
+.vibebp_course .course_card .courseitem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove fundos brancos internos */
+.vibebp_course .course_card .courseitem * {
+    background: transparent !important;
+}
+
+/* Imagens do curso */
+.vibebp_course .course_card .courseitem .block_media img {
+    border-radius: 12px;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Labels de status (ex: preço, livre, inscrições) */
+.vibebp_course .course_card .courseitem .course_price,
+.vibebp_course .course_card .courseitem .course_instructor {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px;
+    padding: 4px 8px;
+    margin-top: 8px;
+}
+
+/* Conteúdo do curso */
+.vibebp_course .course_card .courseitem .block_content {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    margin-top: 12px;
+}
+
+/* Botões (caso existam) */
+.vibebp_course .course_card .courseitem .button {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.vibebp_course .course_card .courseitem .button:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+    transform: translateY(-2px);
+}
+
+
+
+/* ==============================
+   Profile Settings - Liquid Glass
+   ============================== */
+.profile_settings .portal {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.profile_settings .portal:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  transform: translateY(-3px);
+}
+
+/* Cabeçalho do portal */
+.profile_settings .portal_header {
+  background: rgba(255, 255, 255, 0.08) !important;
+  padding: 12px 16px;
+  font-weight: 600;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+.profile_settings .portal_header strong {
+  color: #fff;
+}
+
+/* Corpo do portal */
+.profile_settings .portal_body {
+  padding: 16px;
+  background: transparent !important;
+  color: #fff;
+}
+
+/* ==============================
+   Abas (Alterar e-mail, senha etc.)
+   ============================== */
+.profile_settings .settings_tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.profile_settings .settings_tabs .setting_tab {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-weight: 500;
+  color: #fff !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.profile_settings .settings_tabs .setting_tab:hover,
+.profile_settings .settings_tabs .setting_tab.active {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* ==============================
+   Inputs, Selects, Labels
+   ============================== */
+.profile_settings input,
+.profile_settings select {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 8px 12px;
+  width: 100%;
+  color: #fff;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  margin-top: 5px;
+}
+.profile_settings input:focus,
+.profile_settings select:focus {
+  background: rgba(255, 255, 255, 0.25) !important;
+  outline: none;
+}
+
+.profile_settings label,
+.profile_settings strong {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* ==============================
+   Botões
+   ============================== */
+.profile_settings .button {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.profile_settings .button:hover {
+  background: rgba(255, 255, 255, 0.35) !important;
+  transform: translateY(-2px);
+}
+.profile_settings .button.danger {
+  background: rgba(255, 50, 50, 0.25) !important;
+  border-color: rgba(255, 50, 50, 0.4) !important;
+}
+.profile_settings .button.danger:hover {
+  background: rgba(255, 50, 50, 0.4) !important;
+}
+
+/* ==============================
+   Switches (checkbox estilo slider)
+   ============================== */
+.profile_settings .switch input {
+  display: none;
+}
+.profile_settings .switch .slider {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+.profile_settings .switch .slider:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  left: 2px;
+  bottom: 2px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.profile_settings .switch input:checked + .slider {
+  background: rgba(100, 200, 255, 0.5);
+}
+.profile_settings .switch input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* ==============================
+   Listas (Exportação de dados)
+   ============================== */
+.profile_settings .export_data_items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+}
+.profile_settings .export_data_items li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+/* Sessões ativas */
+.profile_settings .my-logins .login_val {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px 14px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.profile_settings .my-logins .login_date {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+.profile_settings .my-logins .info {
+  font-size: 13px;
+  color: #ddd;
+}
+
+
+/* Liquid Glass aplicado nas caixas principais */
+.portal,
+.vibebp_main_header {
+  background: rgba(255, 255, 255, 0.15); /* vidro translúcido */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Ajuste para o campo de pesquisa */
+.vibebp_main_header .vibebp_form_field input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  outline: none;
+  backdrop-filter: blur(8px);
+}
+
+/* Placeholders mais suaves */
+.vibebp_main_header .vibebp_form_field input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Botões com estilo glassy */
+.vibebp_main_header .buttons .button {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  color: #fff;
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.vibebp_main_header .buttons .button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Botão ativo/destaque */
+.vibebp_main_header .buttons .is-selected {
+  background: rgba(154, 92, 31, 0.6); /* tom baseado na sua paleta */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Ordenação e filtros */
+.vibebp_main_header .order_sorter select {
+ background: rgba(154, 92, 31, 0.6); /* tom baseado na sua paleta */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 6px 10px;
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+.vibebp_main_header .order_sorter span {
+  color: #fff;
+  margin-left: 8px;
+
+
+}
+
+
+.vibebp_myprofile .profile_grid {
+    background: transparent;
+}
+
+
+
+/* Container geral das badges */
+.vibebp_lmsbadges_wrapper {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Header (Total de pontos) */
+.vibebp_main_header.vibebp_form {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Cada badge (card individual) */
+.single_lmsbadge {
+  background: rgba(255, 255, 255, 0.18) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover no badge */
+.single_lmsbadge:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Imagem da badge */
+.single_lmsbadge .badge_image {
+  max-width: 80px;
+  margin: 0 auto 10px;
+  display: block;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+/* Título e pontos */
+.single_lmsbadge .badge_title {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.single_lmsbadge .badge_point {
+  font-size: 14px;
+  font-weight: 500;
+  color: #f0f0f0;
+  opacity: 0.9;
+}
+
+
+.vibebp_pointsbadges_wrapper .vibebp_lmsbadges_wrapper {
+    background: transparent !important;
+    padding: 1rem;
+}
+
+
+.vibebp_pointsbadges_wrapper .vibebp_lmsbadges_wrapper .user_poins {
+ background: rgba(255, 255, 255, 0.18) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.vbp_message{
+ background: rgba(255, 255, 255, 0.18) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+
+/* ==============================
+   Liquid Glass - Bloco de curso (Instructor Block)
+   ============================== */
+
+.course_instructor_block {
+   background: rgba(255,255,255,0.15) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hover suave no bloco */
+.course_instructor_block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove fundos internos */
+.course_instructor_block * {
+    background: transparent !important;
+}
+
+/* Imagem destacada */
+.course_instructor_block .course_featured_image img {
+    border-radius: 12px;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+/* Título do curso */
+.course_instructor_block .course_title h3 {
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+/* Instrutor */
+.course_instructor_block .course_instructor {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.12);
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.course_instructor_block .course_instructor img {
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+}
+
+/* Categorias */
+.course_instructor_block .course_categories span {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+
+
+/* ==============================
+   Liquid Glass - Header de Cursos
+   ============================== */
+.wplms_courses_header {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    transition: all 0.3s ease;
+}
+
+/* Hover suave */
+.wplms_courses_header:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove fundos internos */
+.wplms_courses_header * {
+    background: transparent !important;
+}
+
+/* Botões de status (Publicado, Pendente, Rascunhos) */
+.wplms_courses_header .button,
+.wplms_courses_header .link {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    border-radius: 8px;
+    padding: 6px 12px;
+    transition: all 0.3s ease;
+}
+.wplms_courses_header .button:hover,
+.wplms_courses_header .link:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+    transform: translateY(-2px);
+}
+
+/* Campo de busca */
+.wplms_courses_header input[type="text"] {
+    background: rgba(255,255,255,0.1) !important;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff !important;
+    padding: 6px 10px;
+    border-radius: 8px;
+    outline: none;
+}
+.wplms_courses_header input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+/* Ícone de busca */
+.wplms_courses_header .vicon-search {
+    color: #fff;
+    margin-left: -28px;
+    pointer-events: none;
+}
+
+/* Select */
+.wplms_courses_header select {
+    background: rgba(255,255,255,0.1) !important;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 8px;
+    padding: 6px 12px;
+    color: #fff;
+    outline: none;
+}
+
+.wplms_courses_header select option {
+    background: #222; /* fundo escuro no dropdown */
+    color: #fff;
+}
+
+
+.vibebp_myprofile a.link {
+    margin: 2% !important;
+}
+
+
+.vibebp_message {
+  background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+color: white !important;
+}
+
+
+/* ==============================
+   Liquid Glass - Course Overview
+   ============================== */
+.course_overview_wrapper {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hover suave */
+.course_overview_wrapper:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove fundos internos */
+.course_overview_wrapper * {
+    background: transparent !important;
+}
+
+/* Header do curso */
+.course_overview .course_header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+/* Imagem destacada do curso */
+.course_overview .course_featured img {
+    border-radius: 16px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Descrição e título */
+.course_overview .course_header_description {
+    flex: 1;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Título do curso */
+.course_overview .course_header_description h1 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+/* Botão principal */
+.course_overview .course_header_description .button.is-primary {
+    background: rgba(255,255,255,0.15) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin: 12px 0;
+    transition: all 0.3s ease;
+}
+.course_overview .course_header_description .button.is-primary:hover {
+    background: rgba(255,255,255,0.3) !important;
+    transform: translateY(-2px);
+}
+
+/* Mensagens de erro/aviso */
+.course_overview .vbp_message.error {
+    background: rgba(255,0,0,0.1) !important;
+    border: 1px solid rgba(255,0,0,0.3);
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Descrição curta */
+.course_overview .course_short_description {
+    background: rgba(255,255,255,0.1) !important;
+    border-radius: 12px;
+    padding: 12px;
+    margin-top: 12px;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Abas do curso */
+.course_overview .instructor_tabs span {
+    background: rgba(255,255,255,0.15) !important;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin-right: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.course_overview .instructor_tabs span.active,
+.course_overview .instructor_tabs span:hover {
+    background: rgba(255,255,255,0.3) !important;
+    transform: translateY(-1px);
+}
+
+/* Barra de progresso */
+.course_overview .course_progress_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+}
+.course_overview .course_progress {
+    flex: 1;
+    height: 8px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.course_overview .course_progress span {
+    display: block;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+}
+
+
+.vibebp_left_sidebar_wrapper {
+  margin-top: 2px !important;
+  
+}
+
+.course_meta span:nth-child(3) {
+  display: none !important;
+}
+
+
+
+
+.vibebp_sidebars .vibebp_left_sidebar_wrapper {
+    
+    min-height: 80vh !important;
+
+}
+
+
+.menu_items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* Alinha os elementos filhos à esquerda */
+    text-align: left;         /* Alinha o texto à esquerda */
+}
+
+.menu_items > div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.menu_items span {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre ícone e texto */
+}
+
+.menu_items .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.menu_items svg {
+    display: block;
+}
+
+.profile_menu .menu_items .bp-menu, .profile_menu .todos-cursos, .profile_menu .inicio {
+  
+    align-items: start;
+
+}
+
+
+
+.course_status .course_timeline
+
+ {
+   
+    background: transparent !important;
+
+}
+
+.course_timeline {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+
+}
+
+.vibebp_main * {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.course_status .course_timeline {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border-right: 1px solid var(--border) !important; /* mantém a borda */
+margin: 15px !important;
+}
+
+.course_status .course_timeline {
+  background: rgba(255, 255, 255, 0.15) !important; /* fundo branco translúcido */
+  backdrop-filter: blur(12px) !important; /* efeito vidro */
+  -webkit-backdrop-filter: blur(12px) ;
+  
+  border-radius: 16px !important; /* cantos arredondados */
+  border: 1px solid rgba(255, 255, 255, 0.2) !important; /* borda sutil */
+  
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important; /* sombra elegante */
+  
+  transition: all 0.3s ease-in-out !important;
+  padding: 12px !important; /* espaço interno */
+}
+
+
+/* Base do efeito liquid glass */
+
+.course_content_header,
+.review_block,
+.unit_prevnext .navigate_unit,
+.course_content_content_wrapper,
+.next_curriculum_item {
+  background: rgba(255, 255, 255, 0.15) !important; /* branco translúcido */
+  backdrop-filter: blur(12px)  !important;
+  -webkit-backdrop-filter: blur(12px) ;
+  border: 1px solid rgba(255, 255, 255, 0.25); /* borda discreta */
+  border-radius: 16px;
+margin: 20px !important;
+  transition: all 0.3s ease;
+}
+
+/* Container principal */
+.course_content {
+  padding: 20px;
+}
+
+/* Cabeçalho */
+.course_content_header {
+  padding: 12px 18px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Bloco de avaliação */
+.review_block {
+  padding: 6px 12px;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Botões de navegação */
+.unit_prevnext .navigate_unit {
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.unit_prevnext .navigate_unit:hover,
+.next_curriculum_item:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  transform: translateY(-2px);
+}
+
+/* Conteúdo */
+.course_content_content_wrapper {
+  padding: 20px;
+  margin-top: 10px;
+}
+
+/* Próxima unidade */
+.next_curriculum_item {
+  margin-top: 20px;
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Scrollbar estilo liquid glass clean */
+::-webkit-scrollbar {
+  width: 15px !important;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.25) rgba(255,255,255,0.1);
+}
+
+/* Seleção de texto */
+::selection {
+  background: rgba(255, 255, 255, 0.25);
+  color: #000; /* texto preto para contraste clean */
+}
+
+::-moz-selection {
+  background: rgba(255, 255, 255, 0.25);
+  color: #000;
+}
+
+
+.wplms_course_categories a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15); /* vidro translúcido */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff; /* texto branco, ajuste se quiser */
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.wplms_course_categories a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.elementor-340 .elementor-element.elementor-element-6e9d0f0 > .elementor-widget-container {
+background: transparent ;
+display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15) !important; /* vidro translúcido */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff; /* texto branco, ajuste se quiser */
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+
+
+/* Container principal do curso */
+.course_manage {
+    background: rgba(255, 255, 255, 0.15); /* Transparência leve */
+    backdrop-filter: blur(12px); /* Desfoque do fundo */
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Efeito hover suave */
+.course_manage:hover {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Imagem do curso */
+.course_information img {
+    border-radius: 12px;
+    max-width: 100%;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Título e descrição */
+.course_information h2 {
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+}
+.course_information span,
+.course_information .friendly_time,
+.course_information .course_meta {
+    color: rgba(255,255,255,0.85);
+}
+
+/* Link "Mostrar Mais" */
+.course_information a.link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.course_information a.link:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* Tabs do curso */
+.course_tabs .instructor_tabs span {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 12px;
+    margin-right: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.course_tabs .instructor_tabs span.active,
+.course_tabs .instructor_tabs span:hover {
+    background: rgba(255,255,255,0.35);
+}
+
+/* Cards de alunos */
+.course_student {
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+.course_student:hover {
+    background: rgba(255, 255, 255, 0.20);
+}
+
+/* Informações do aluno */
+.user_credentials span {
+    color: #fff;
+}
+
+/* Barra de progresso do curso */
+.course_progress {
+    background: rgba(255,255,255,0.2);
+    border-radius: 8px;
+    height: 8px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+.course_progress span {
+    background: #fff;
+    height: 100%;
+    display: block;
+}
+
+/* Botões de ações em massa */
+.bulk_action span {
+    background: rgba(255,255,255,0.15);
+    padding: 8px 12px;
+    border-radius: 12px;
+    margin-right: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.bulk_action span:hover {
+    background: rgba(255,255,255,0.30);
+}
+/* Liquid Glass apenas em elementos clicáveis */
+.students_filter.vibebp_form input,
+.students_filter.vibebp_form select,
+.students_filter.vibebp_form .vicon {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 12px !important;
+    color: #fff !important; /* Cor do texto do input e select */
+    margin-inline: 2px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Hover e foco para todos elementos clicáveis */
+.students_filter.vibebp_form input:hover,
+.students_filter.vibebp_form input:focus,
+.students_filter.vibebp_form select:hover,
+.students_filter.vibebp_form select:focus,
+.students_filter.vibebp_form .vicon:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    outline: none !important;
+}
+
+/* Placeholder do input */
+.students_filter.vibebp_form input::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Espaçamento interno */
+.students_filter.vibebp_form input,
+.students_filter.vibebp_form select {
+    padding: 8px 12px !important;
+    height: 38px !important;
+}
+
+/* Apenas muda a cor do texto do option para ser visível */
+.students_filter.vibebp_form select option {
+    color: #000 !important; /* Texto preto visível */
+    background: #fff !important; /* Fundo branco padrão do option */
+    padding: 4px 8px !important;
+}
+
+/* Custom dropdown para Liquid Glass se quiser substituir select */
+.custom-select, 
+.custom-select .selected, 
+.custom-select .options li {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 12px;
+  color: black !important;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-select .options li:hover {
+  background: rgba(255,255,255,0.25);
+  border-color: rgba(255,255,255,0.5);
+}
+
+
+
+
+
+
+
+/* Container principal */
+.categorias_select {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(24px) saturate(220%);
+  -webkit-backdrop-filter: blur(24px) ;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+  padding: 16px;
+  max-width: 380px;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Label */
+.categorias_select .term_select_label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 14px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(200%);
+  -webkit-backdrop-filter: blur(20px) saturate(200%);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.categorias_select .term_select_label:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+/* Ícone */
+.categorias_select .term_select_label i {
+  transition: transform 0.3s ease;
+}
+.categorias_select .term_select_label:hover i {
+  transform: rotate(90deg);
+}
+
+/* Lista de termos */
+.categorias_select .search_term_list {
+  margin-top: 12px;
+  max-height: 240px;
+  overflow-y: auto;
+  padding: 10px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(22px) saturate(200%);
+  -webkit-backdrop-filter: blur(22px) saturate(200%);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: inset 0 0 16px rgba(255,255,255,0.15), 0 6px 24px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+}
+
+/* Cada termo e caixa de pesquisa */
+.search_term_list > .search_term,
+.search_term_list > .searchbox {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border-radius: 14px;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  transition: background 0.2s, transform 0.1s;
+  cursor: pointer;
+}
+
+/* Hover dos itens */
+.search_term_list > .search_term:hover,
+.search_term_list > .searchbox:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: translateX(2px);
+}
+
+/* Input de pesquisa */
+.search_term_list .searchbox input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+  font-size: 14px;
+}
+.search_term_list .searchbox input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Scroll personalizado */
+.search_term_list::-webkit-scrollbar {
+  width: 8px;
+}
+.search_term_list::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 8px;
+}
+.search_term_list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.taxonomy_field .search_term_list {
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+ 
+}
+/* Container geral */
+.wplms_course_creation_tabs {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Itens individuais (abas) com efeito liquid glass clarinho */
+.wplms_course_creation_tabs ul li {
+  background: rgba(255, 255, 255, 0.06) !important; /* clarinho */
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+
+  margin-inline: 5px 0 !important;
+}
+
+/* Hover */
+.wplms_course_creation_tabs ul li:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Aba ativa */
+.wplms_course_creation_tabs ul li.active {
+  background: rgba(255, 255, 255, 0.14) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+
+
+.vibe_publish_course .field_wrapper:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.vibe_publish_course .field_wrapper label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.vibe_publish_course .field_value a.button.major {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #222;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vibe_publish_course .field_value a.button.major:hover {
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+
+
+.vibe_save_course_components_button .field_wrapper:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.vibe_save_course_components_button .field_value a.button.major {
+  display: inline-block;
+  
+  color: #222;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wplms_create_course_overlay{
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.vibe_save_course_components_button .field_value a.button.major:hover {
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* 🔹 Estilo Liquid Glass para Avançar/Voltar em Configurações */
+.vibe_save_course_settings_button .field_wrapper {
+  
+
+
+ 
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vibe_save_course_settings_button .field_wrapper:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.vibe_save_course_settings_button .field_value a.button.major {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #222;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vibe_save_course_settings_button .field_value a.button.major:hover {
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+
+.vibebp_myprofile select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 0 2rem 0 1rem;
+    height: 2.5rem;
+    max-width: 320px;
+    font-size: 1rem;
+    vertical-align: middle;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+
+    /* liquid glass */
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    color: #000 !important; /* texto sempre preto */
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+    /* setinha preta */
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 140 140' width='24' height='24' fill='black' xmlns='http://www.w3.org/2000/svg'><path d='m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z' /></svg>");
+    background-position: calc(100% - .8rem) 50%;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+}
+
+/* Hover / Focus */
+.vibebp_myprofile select:hover,
+.vibebp_myprofile select:focus {
+    border-color: rgba(0, 0, 0, 0.6);
+    outline: none;
+}
+
+/* opções legíveis */
+.vibebp_myprofile select option {
+    background: #fff !important;
+    color: #000 !important;
+}
+
+/* Container principal */
+#course_settings {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover suave */
+#course_settings:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove fundos internos */
+#course_settings * {
+  background: transparent !important;
+  color: #fff !important;
+}
+
+/* Labels e títulos */
+#course_settings label,
+#course_settings strong {
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Botões */
+#course_settings .button {
+  background: rgba(255,255,255,0.15) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+#course_settings .button:hover {
+  background: rgba(255,255,255,0.3) !important;
+  transform: translateY(-2px);
+}
+
+/* Campos de input / select / number */
+#course_settings input,
+#course_settings select,
+#course_settings textarea {
+  background: rgba(255,255,255,0.1) !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  border-radius: 8px;
+  color: #fff !important;
+  padding: 6px 10px;
+}
+
+/* Switches (checkbox custom) */
+#course_settings .switch input:checked + label {
+  background: rgba(255,255,255,0.3) !important;
+}
+#course_settings .switch label {
+  background: rgba(255,255,255,0.15) !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+}
+
+/* Áreas de editor */
+#course_settings .vibe_editor {
+  background: rgba(255,255,255,0.1) !important;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+/* Container principal do currículo */
+.course_curriculum_builder_wrapper {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Hover suave */
+.course_curriculum_builder_wrapper:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove fundos internos */
+.course_curriculum_builder_wrapper * {
+  background: transparent !important;
+  color: #fff !important;
+}
+
+/* Lista de currículo */
+.course_curriculum_builder_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Elementos do currículo */
+.course_curriculum .curriculum_field {
+  background: rgba(255,255,255,0.1) !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+  cursor: grab;
+}
+.course_curriculum .curriculum_field:hover {
+  background: rgba(255,255,255,0.25) !important;
+  transform: translateY(-2px);
+}
+
+/* Texto e ícones dentro do currículo */
+.course_curriculum strong,
+.course_curriculum div,
+.course_curriculum i {
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Botões de ação (Adicionar seção, unidade, quiz, etc.) */
+.add_curriculum_element .button {
+  background: rgba(255,255,255,0.15) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin: 6px;
+  transition: all 0.3s ease;
+}
+.add_curriculum_element .button:hover {
+  background: rgba(255,255,255,0.3) !important;
+  transform: translateY(-2px);
+}
+
+/* Botões de navegação (Avançar/Voltar) */
+.vibe_save_curriculum_button .button {
+  background: rgba(255,255,255,0.15) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.vibe_save_curriculum_button .button:hover {
+  background: rgba(255,255,255,0.3) !important;
+  transform: translateY(-2px);
+}
+
+/* Botão remover item (X) */
+.course_curriculum .remove {
+  color: #fff !important;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.course_curriculum .remove:hover {
+  opacity: 1;
+}
+
+
+/* Container principal do pricing */
+#course_pricing {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Hover suave */
+#course_pricing:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove fundos internos */
+#course_pricing * {
+  background: transparent !important;
+  color: #fff !important;
+
+}
+
+/* Switches (checkbox estilizado) */
+.course_pricing .switch input[type="checkbox"] + .slider {
+  background: rgba(255,255,255,0.2);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+.course_pricing .switch input[type="checkbox"]:checked + .slider {
+  background: rgba(255,255,255,0.4);
+}
+
+/* Campos de preço */
+.course_pricing .course_product_price {
+  background: rgba(255,255,255,0.1) !important;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+.course_pricing .course_product_price .vicon-pencil {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.course_pricing .course_product_price .vicon-pencil:hover {
+  opacity: 1;
+}
+
+/* Botões principais */
+.course_pricing .button.major {
+  background: rgba(255,255,255,0.15) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  border-radius: 8px;
+  padding: 10px 16px;
+  transition: all 0.3s ease;
+}
+.course_pricing .button.major:hover {
+  background: rgba(255,255,255,0.3) !important;
+  transform: translateY(-2px);
+}
+
+
+/* Container principal do Course Components */
+.course_components {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Hover suave */
+.course_components:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove fundos internos */
+.course_components * {
+  background: transparent !important;
+  color: #fff !important;
+}
+
+/* Campos de grupo do curso */
+.course_components .coursegroups {
+  background: rgba(255,255,255,0.1) !important;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Ícones dentro do grupo */
+.course_components .coursegroups .vicon {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.course_components .coursegroups .vicon:hover {
+  opacity: 1;
+}
+
+/* Botões de navegação (Avançar / Voltar) */
+.course_components .button.major {
+  background: rgba(255,255,255,0.15) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  border-radius: 8px;
+  padding: 10px 16px;
+  transition: all 0.3s ease;
+}
+.course_components .button.major:hover {
+  background: rgba(255,255,255,0.3) !important;
+  transform: translateY(-2px);
+}
+
+
+/* ===========================
+   Liquid Glass - Create Course
+   =========================== */
+
+/* Container principal do Create Course */
+#create_course .create_course_wrapper {
+  background: rgba(255, 255, 255, 0.12); /* fundo mais transparente */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+
+  padding: 20px;
+
+  transition: all 0.3s ease;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Hover suave */
+#create_course .create_course_wrapper:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Remove fundos internos */
+#create_course .create_course_wrapper * {
+  background: transparent !important;
+  color: #fff !important;
+}
+
+/* Painéis internos (Left, Right, Grid, Actions) */
+#create_course .create_course_left_panel,
+#create_course .create_course_right_panel,
+#create_course .create_course_grid_panel,
+#create_course .create_course_actions_panel {
+  background: rgba(255, 255, 255, 0.08) !important; /* mais clarinho */
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+/* Blocos de mídia (thumbnail, vídeo) */
+#create_course .media_wrapper,
+#create_course .featured_video_options {
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+/* Botões principais */
+#create_course .button.major,
+#create_course .vibe_save_course_button .button.is-primary {
+  background: rgba(255,255,255,0.15) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  border-radius: 8px;
+  padding: 10px 16px;
+  transition: all 0.3s ease;
+}
+
+#create_course .button.major:hover,
+#create_course .vibe_save_course_button .button.is-primary:hover {
+  background: rgba(255,255,255,0.3) !important;
+  transform: translateY(-2px);
+}
+
+/* Ícones (vicon) */
+#create_course .vicon {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+#create_course .vicon:hover {
+  opacity: 1;
+}
+
+/* Mini cartões de duração, número de vagas, datas e switches */
+#create_course .create_course_grid_panel .grid > div {
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+/* ===========================
+   Liquid Glass - Achievements & Certificates
+   =========================== */
+
+/* Wrapper principal */
+.my_achievements_wrapper,
+.my_certificates_wrapper {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 20px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  margin-bottom: 20px;
+}
+
+/* Hover suave */
+.my_achievements_wrapper:hover,
+.my_certificates_wrapper:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(0,0,0,0.12);
+}
+
+/* Títulos */
+.my_certificates_wrapper h3 {
+  color: #fff;
+  margin-bottom: 16px;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Container dos certificados */
+.my_certificates.course_blocks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Cada certificado */
+.my_certificate {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 12px 16px;
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.my_certificate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+}
+
+/* SVG ícones dos certificados */
+.my_certificate svg {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 8px;
+  fill: rgba(255,255,255,0.9);
+  transition: all 0.3s ease;
+}
+
+.my_certificate svg:hover {
+  fill: #fff;
+  transform: scale(1.05);
+}
+
+/* Título do certificado */
+.my_certificate strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Mensagem quando não há certificados */
+.vbp_message {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 12px;
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+  margin-top: 12px;
+}
+
+.buttons.has-addons .button.is-selected {
+     background: transparent !important; 
+    color: var(--primarycolor) !important;
+}
+
+
+
+/* ===========================
+   Liquid Glass - Botão Criar Curso
+   =========================== */
+.button.is-primary.new_mail {
+  background: rgba(255, 255, 255, 0.15 ) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  color: #fff;
+
+}
+
+/* Hover suave */
+.button.is-primary.new_mail:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+
+/* ===========================
+   Liquid Glass - Instruções do Curso
+   =========================== */
+.course_instructions_wrapper {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover suave */
+.course_instructions_wrapper:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+/* Botão de fechar */
+.course_instructions_wrapper .close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+
+.course_instructions_wrapper .close .vicon {
+  color: #fff;
+  opacity: 0.8;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease;
+}
+
+.course_instructions_wrapper .close .vicon:hover {
+  opacity: 1;
+}
+
+/* Título principal */
+.course_instructions_wrapper h1 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Editor de texto interno */
+.course_instructions_wrapper .vibe_editor_rich_text {
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 16px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Listas e parágrafos */
+.course_instructions_wrapper ol,
+.course_instructions_wrapper p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.course_instructions_wrapper li {
+  margin-bottom: 8px;
+  padding-left: 8px;
+}
+
