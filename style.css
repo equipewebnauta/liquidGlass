@@ -1,4 +1,8 @@
 
+
+/* ==============================================
+   🎨 VARIÁVEIS E CONFIGURAÇÕES GERAIS
+============================================== */
 /* INICIO LIQUID GLASS */
 
 
@@ -12,6 +16,10 @@
 }
 
 /* Garante que o fundo ocupe toda a tela */
+
+/* ==============================================
+   🌍 ESTRUTURA GLOBAL E BACKGROUND
+============================================== */
 html, body {
     width: 100%;
     height: 100%;
@@ -28,13 +36,17 @@ html, body {
 /* Remove qualquer fundo branco dos elementos principais */
 
 /* Opcional: aplicar glassmorphism em containers principais */
+
+/* ==============================================
+   📦 CONTAINERS PRINCIPAIS (Wrapper, Sidebar, etc.)
+============================================== */
 .container,
 .wrapper,
 .mycourses_header,
 .vibebp_left_sidebar_wrapper {
     background: var(--glass-bg) !important;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
     border:var(--glass-border);
     transition: all 0.3s ease;
@@ -51,17 +63,29 @@ background: transparent;
 
 
 /* Hover suave */
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
 .course_blocks .course_block_wrap:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Remove fundos brancos internos */
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
 .course_blocks .course_block_wrap * {
     background: transparent !important;
 }
 
 /* Imagens dos cursos */
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
 .course_blocks .course_featured_image img {
     border-radius: 12px 0 0 ;
     display: block;
@@ -72,6 +96,10 @@ background: transparent;
 
 
 /* Labels de status */
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
 .course_blocks .course_label span.active {
     background: rgba(255, 255, 255, 0.2) !important;
     color: #fff;
@@ -83,6 +111,10 @@ background: transparent;
 
 
 /* Botões */
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
 .course_blocks .course_block_actions .button {
     background: rgba(255, 255, 255, 0.15) !important;
     color: #fff !important;
@@ -93,6 +125,10 @@ background: transparent;
     transition: all 0.3s ease;
 }
 
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
 .course_blocks .course_block_actions .button:hover {
     background: rgba(255, 255, 255, 0.3) !important;
     transform: translateY(-2px);
@@ -101,8 +137,8 @@ background: transparent;
 /* Fundo principal do cabeçalho dos cursos */
 .mycourses_header {
     background: rgba(255, 255, 255, 0.15) !important; /* translúcido */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 16px;
@@ -179,8 +215,8 @@ background: transparent;
 /* Fundo principal do menu de perfil */
 .profile_menu {
     background: rgba(255, 255, 255, 0.15) !important; /* translúcido */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -279,10 +315,14 @@ background: transparent;
 
 
 /* Fundo principal de todos os blocos */
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
 .course_blocks .course_block_wrap {
     background: rgba(255, 255, 255, 0.15) !important; /* translúcido */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 16px;
@@ -291,17 +331,29 @@ background: transparent;
 }
 
 /* Hover suave */
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
 .course_blocks .course_block_wrap:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Remove fundos brancos internos */
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
 .course_blocks .course_block_wrap * {
     background: transparent !important;
 }
 
 /* Imagens dos cursos */
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
 .course_blocks .course_featured_image img {
     border-radius: 12px;
     display: block;
@@ -313,6 +365,10 @@ background: transparent;
 
 
 /* Labels de status */
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
 .course_blocks .course_label span.active {
     background: rgba(255, 255, 255, 0.2) !important;
     color: #fff;
@@ -323,6 +379,10 @@ background: transparent;
 
 
 /* Botões */
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
 .course_blocks .course_block_actions .button {
     background: rgba(255, 255, 255, 0.15) !important;
     color: #fff !important;
@@ -333,6 +393,10 @@ background: transparent;
     transition: all 0.3s ease;
 }
 
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
 .course_blocks .course_block_actions .button:hover {
     background: rgba(255, 255, 255, 0.3) !important;
     transform: translateY(-2px);
@@ -342,10 +406,14 @@ background: transparent;
 /* ==============================
    Liquid Glass - Bloco de curso Vibebp
    ============================== */
+
+/* ==============================================
+   🎓 BLOCO DE CURSO VIBEBP (Cards Individuais)
+============================================== */
 .vibebp_course .course_card .courseitem {
     background: rgba(255, 255, 255, 0.15) !important; /* translúcido */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 16px;
@@ -354,17 +422,29 @@ background: transparent;
 }
 
 /* Hover suave */
+
+/* ==============================================
+   🎓 BLOCO DE CURSO VIBEBP (Cards Individuais)
+============================================== */
 .vibebp_course .course_card .courseitem:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Remove fundos brancos internos */
+
+/* ==============================================
+   🎓 BLOCO DE CURSO VIBEBP (Cards Individuais)
+============================================== */
 .vibebp_course .course_card .courseitem * {
     background: transparent !important;
 }
 
 /* Imagens do curso */
+
+/* ==============================================
+   🎓 BLOCO DE CURSO VIBEBP (Cards Individuais)
+============================================== */
 .vibebp_course .course_card .courseitem .block_media img {
     border-radius: 12px;
     display: block;
@@ -374,7 +454,15 @@ background: transparent;
 }
 
 /* Labels de status (ex: preço, livre, inscrições) */
+
+/* ==============================================
+   🎓 BLOCO DE CURSO VIBEBP (Cards Individuais)
+============================================== */
 .vibebp_course .course_card .courseitem .course_price,
+
+/* ==============================================
+   🎓 BLOCO DE CURSO VIBEBP (Cards Individuais)
+============================================== */
 .vibebp_course .course_card .courseitem .course_instructor {
     background: rgba(255, 255, 255, 0.1) !important;
     border-radius: 12px;
@@ -383,6 +471,10 @@ background: transparent;
 }
 
 /* Conteúdo do curso */
+
+/* ==============================================
+   🎓 BLOCO DE CURSO VIBEBP (Cards Individuais)
+============================================== */
 .vibebp_course .course_card .courseitem .block_content {
     color: #ffffff;
     text-shadow: 0 1px 2px rgba(0,0,0,0.3);
@@ -390,6 +482,10 @@ background: transparent;
 }
 
 /* Botões (caso existam) */
+
+/* ==============================================
+   🎓 BLOCO DE CURSO VIBEBP (Cards Individuais)
+============================================== */
 .vibebp_course .course_card .courseitem .button {
     background: rgba(255, 255, 255, 0.15) !important;
     color: #fff !important;
@@ -400,6 +496,10 @@ background: transparent;
     transition: all 0.3s ease;
 }
 
+
+/* ==============================================
+   🎓 BLOCO DE CURSO VIBEBP (Cards Individuais)
+============================================== */
 .vibebp_course .course_card .courseitem .button:hover {
     background: rgba(255, 255, 255, 0.3) !important;
     transform: translateY(-2px);
@@ -410,6 +510,10 @@ background: transparent;
 /* ==============================
    Profile Settings - Liquid Glass
    ============================== */
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .portal {
   background: rgba(255, 255, 255, 0.15) !important;
   backdrop-filter: blur(12px);
@@ -421,12 +525,20 @@ background: transparent;
   overflow: hidden;
   transition: all 0.3s ease;
 }
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .portal:hover {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
   transform: translateY(-3px);
 }
 
 /* Cabeçalho do portal */
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .portal_header {
   background: rgba(255, 255, 255, 0.08) !important;
   padding: 12px 16px;
@@ -434,11 +546,19 @@ background: transparent;
   font-size: 15px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .portal_header strong {
   color: #fff;
 }
 
 /* Corpo do portal */
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .portal_body {
   padding: 16px;
   background: transparent !important;
@@ -448,11 +568,19 @@ background: transparent;
 /* ==============================
    Abas (Alterar e-mail, senha etc.)
    ============================== */
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .settings_tabs {
   display: flex;
   gap: 10px;
   margin-bottom: 15px;
 }
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .settings_tabs .setting_tab {
   background: rgba(255, 255, 255, 0.15) !important;
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -463,7 +591,15 @@ background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .settings_tabs .setting_tab:hover,
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .settings_tabs .setting_tab.active {
   background: rgba(255, 255, 255, 0.3) !important;
 }
@@ -471,7 +607,15 @@ background: transparent;
 /* ==============================
    Inputs, Selects, Labels
    ============================== */
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings input,
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings select {
   background: rgba(255, 255, 255, 0.15) !important;
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -484,13 +628,29 @@ background: transparent;
   transition: all 0.3s ease;
   margin-top: 5px;
 }
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings input:focus,
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings select:focus {
   background: rgba(255, 255, 255, 0.25) !important;
   outline: none;
 }
 
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings label,
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings strong {
   color: #fff;
   font-weight: 500;
@@ -501,6 +661,10 @@ background: transparent;
 /* ==============================
    Botões
    ============================== */
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .button {
   background: rgba(255, 255, 255, 0.2) !important;
   color: #fff !important;
@@ -511,14 +675,26 @@ background: transparent;
   transition: all 0.3s ease;
   display: inline-block;
 }
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .button:hover {
   background: rgba(255, 255, 255, 0.35) !important;
   transform: translateY(-2px);
 }
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .button.danger {
   background: rgba(255, 50, 50, 0.25) !important;
   border-color: rgba(255, 50, 50, 0.4) !important;
 }
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .button.danger:hover {
   background: rgba(255, 50, 50, 0.4) !important;
 }
@@ -526,9 +702,17 @@ background: transparent;
 /* ==============================
    Switches (checkbox estilo slider)
    ============================== */
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .switch input {
   display: none;
 }
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .switch .slider {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 30px;
@@ -539,6 +723,10 @@ background: transparent;
   width: 40px;
   height: 20px;
 }
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .switch .slider:before {
   content: "";
   position: absolute;
@@ -550,9 +738,17 @@ background: transparent;
   background: #fff;
   transition: all 0.3s ease;
 }
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .switch input:checked + .slider {
   background: rgba(100, 200, 255, 0.5);
 }
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .switch input:checked + .slider:before {
   transform: translateX(20px);
 }
@@ -560,11 +756,19 @@ background: transparent;
 /* ==============================
    Listas (Exportação de dados)
    ============================== */
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .export_data_items ul {
   list-style: none;
   padding: 0;
   margin: 0 0 15px;
 }
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .export_data_items li {
   background: rgba(255, 255, 255, 0.1);
   padding: 8px 12px;
@@ -574,6 +778,10 @@ background: transparent;
 }
 
 /* Sessões ativas */
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .my-logins .login_val {
   background: rgba(255, 255, 255, 0.15);
   padding: 10px 14px;
@@ -583,11 +791,19 @@ background: transparent;
   flex-direction: column;
   gap: 6px;
 }
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .my-logins .login_date {
   font-size: 14px;
   font-weight: 600;
   color: #fff;
 }
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
+============================================== */
 .profile_settings .my-logins .info {
   font-size: 13px;
   color: #ddd;
@@ -596,6 +812,10 @@ background: transparent;
 
 /* Liquid Glass aplicado nas caixas principais */
 .portal,
+
+/* ==============================================
+   🔎 CABEÇALHO PRINCIPAL - PESQUISA & FILTROS
+============================================== */
 .vibebp_main_header {
   background: rgba(255, 255, 255, 0.15); /* vidro translúcido */
   border-radius: 16px;
@@ -608,6 +828,10 @@ background: transparent;
 }
 
 /* Ajuste para o campo de pesquisa */
+
+/* ==============================================
+   🔎 CABEÇALHO PRINCIPAL - PESQUISA & FILTROS
+============================================== */
 .vibebp_main_header .vibebp_form_field input {
   width: 100%;
   padding: 10px 15px;
@@ -620,11 +844,19 @@ background: transparent;
 }
 
 /* Placeholders mais suaves */
+
+/* ==============================================
+   🔎 CABEÇALHO PRINCIPAL - PESQUISA & FILTROS
+============================================== */
 .vibebp_main_header .vibebp_form_field input::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 
 /* Botões com estilo glassy */
+
+/* ==============================================
+   🔎 CABEÇALHO PRINCIPAL - PESQUISA & FILTROS
+============================================== */
 .vibebp_main_header .buttons .button {
   background: rgba(255, 255, 255, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -634,17 +866,29 @@ background: transparent;
   transition: 0.3s;
 }
 
+
+/* ==============================================
+   🔎 CABEÇALHO PRINCIPAL - PESQUISA & FILTROS
+============================================== */
 .vibebp_main_header .buttons .button:hover {
   background: rgba(255, 255, 255, 0.4);
 }
 
 /* Botão ativo/destaque */
+
+/* ==============================================
+   🔎 CABEÇALHO PRINCIPAL - PESQUISA & FILTROS
+============================================== */
 .vibebp_main_header .buttons .is-selected {
   background: rgba(154, 92, 31, 0.6); /* tom baseado na sua paleta */
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 /* Ordenação e filtros */
+
+/* ==============================================
+   🔎 CABEÇALHO PRINCIPAL - PESQUISA & FILTROS
+============================================== */
 .vibebp_main_header .order_sorter select {
  background: rgba(154, 92, 31, 0.6); /* tom baseado na sua paleta */
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -654,6 +898,10 @@ background: transparent;
   backdrop-filter: blur(6px);
 }
 
+
+/* ==============================================
+   🔎 CABEÇALHO PRINCIPAL - PESQUISA & FILTROS
+============================================== */
 .vibebp_main_header .order_sorter span {
   color: #fff;
   margin-left: 8px;
@@ -669,10 +917,14 @@ background: transparent;
 
 
 /* Container geral das badges */
+
+/* ==============================================
+   🏆 BADGES E PONTUAÇÕES
+============================================== */
 .vibebp_lmsbadges_wrapper {
   background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 20px;
@@ -681,6 +933,10 @@ background: transparent;
 }
 
 /* Header (Total de pontos) */
+
+/* ==============================================
+   🔎 CABEÇALHO PRINCIPAL - PESQUISA & FILTROS
+============================================== */
 .vibebp_main_header.vibebp_form {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(6px);
@@ -741,13 +997,21 @@ background: transparent;
 }
 
 
-.vibebp_pointsbadges_wrapper .vibebp_lmsbadges_wrapper {
+.vibebp_pointsbadges_wrapper 
+/* ==============================================
+   🏆 BADGES E PONTUAÇÕES
+============================================== */
+.vibebp_lmsbadges_wrapper {
     background: transparent !important;
     padding: 1rem;
 }
 
 
-.vibebp_pointsbadges_wrapper .vibebp_lmsbadges_wrapper .user_poins {
+.vibebp_pointsbadges_wrapper 
+/* ==============================================
+   🏆 BADGES E PONTUAÇÕES
+============================================== */
+.vibebp_lmsbadges_wrapper .user_poins {
  background: rgba(255, 255, 255, 0.18) !important;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -769,10 +1033,14 @@ background: transparent;
    Liquid Glass - Bloco de curso (Instructor Block)
    ============================== */
 
+
+/* ==============================================
+   👨‍🏫 BLOCO DE INSTRUTOR
+============================================== */
 .course_instructor_block {
    background: var(--glass-bg) !important;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 16px;
@@ -781,17 +1049,29 @@ background: transparent;
 }
 
 /* Hover suave no bloco */
+
+/* ==============================================
+   👨‍🏫 BLOCO DE INSTRUTOR
+============================================== */
 .course_instructor_block:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Remove fundos internos */
+
+/* ==============================================
+   👨‍🏫 BLOCO DE INSTRUTOR
+============================================== */
 .course_instructor_block * {
     background: transparent !important;
 }
 
 /* Imagem destacada */
+
+/* ==============================================
+   👨‍🏫 BLOCO DE INSTRUTOR
+============================================== */
 .course_instructor_block .course_featured_image img {
     border-radius: 12px;
     display: block;
@@ -802,6 +1082,10 @@ background: transparent;
 }
 
 /* Título do curso */
+
+/* ==============================================
+   👨‍🏫 BLOCO DE INSTRUTOR
+============================================== */
 .course_instructor_block .course_title h3 {
     color: #fff;
     text-shadow: 0 1px 2px rgba(0,0,0,0.4);
@@ -810,6 +1094,10 @@ background: transparent;
 }
 
 /* Instrutor */
+
+/* ==============================================
+   👨‍🏫 BLOCO DE INSTRUTOR
+============================================== */
 .course_instructor_block .course_instructor {
     display: flex;
     align-items: center;
@@ -821,6 +1109,10 @@ background: transparent;
     color: #fff;
     margin-bottom: 10px;
 }
+
+/* ==============================================
+   👨‍🏫 BLOCO DE INSTRUTOR
+============================================== */
 .course_instructor_block .course_instructor img {
     border-radius: 50%;
     width: 28px;
@@ -828,6 +1120,10 @@ background: transparent;
 }
 
 /* Categorias */
+
+/* ==============================================
+   👨‍🏫 BLOCO DE INSTRUTOR
+============================================== */
 .course_instructor_block .course_categories span {
     display: inline-block;
     background: rgba(255,255,255,0.12);
@@ -842,10 +1138,14 @@ background: transparent;
 /* ==============================
    Liquid Glass - Header de Cursos
    ============================== */
+
+/* ==============================================
+   📑 HEADER DE CURSOS WPLMS
+============================================== */
 .wplms_courses_header {
     background: rgba(255, 255, 255, 0.15) !important;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 16px;
@@ -858,18 +1158,34 @@ background: transparent;
 }
 
 /* Hover suave */
+
+/* ==============================================
+   📑 HEADER DE CURSOS WPLMS
+============================================== */
 .wplms_courses_header:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Remove fundos internos */
+
+/* ==============================================
+   📑 HEADER DE CURSOS WPLMS
+============================================== */
 .wplms_courses_header * {
     background: transparent !important;
 }
 
 /* Botões de status (Publicado, Pendente, Rascunhos) */
+
+/* ==============================================
+   📑 HEADER DE CURSOS WPLMS
+============================================== */
 .wplms_courses_header .button,
+
+/* ==============================================
+   📑 HEADER DE CURSOS WPLMS
+============================================== */
 .wplms_courses_header .link {
     background: rgba(255, 255, 255, 0.15) !important;
     color: #fff !important;
@@ -878,13 +1194,25 @@ background: transparent;
     padding: 6px 12px;
     transition: all 0.3s ease;
 }
+
+/* ==============================================
+   📑 HEADER DE CURSOS WPLMS
+============================================== */
 .wplms_courses_header .button:hover,
+
+/* ==============================================
+   📑 HEADER DE CURSOS WPLMS
+============================================== */
 .wplms_courses_header .link:hover {
     background: rgba(255, 255, 255, 0.3) !important;
     transform: translateY(-2px);
 }
 
 /* Campo de busca */
+
+/* ==============================================
+   📑 HEADER DE CURSOS WPLMS
+============================================== */
 .wplms_courses_header input[type="text"] {
     background: rgba(255,255,255,0.1) !important;
     border:var(--glass-border);
@@ -893,11 +1221,19 @@ background: transparent;
     border-radius: 8px;
     outline: none;
 }
+
+/* ==============================================
+   📑 HEADER DE CURSOS WPLMS
+============================================== */
 .wplms_courses_header input::placeholder {
     color: rgba(255,255,255,0.6);
 }
 
 /* Ícone de busca */
+
+/* ==============================================
+   📑 HEADER DE CURSOS WPLMS
+============================================== */
 .wplms_courses_header .vicon-search {
     color: #fff;
     margin-left: -28px;
@@ -905,6 +1241,10 @@ background: transparent;
 }
 
 /* Select */
+
+/* ==============================================
+   📑 HEADER DE CURSOS WPLMS
+============================================== */
 .wplms_courses_header select {
     background: rgba(255,255,255,0.1) !important;
     border:var(--glass-border);
@@ -914,6 +1254,10 @@ background: transparent;
     outline: none;
 }
 
+
+/* ==============================================
+   📑 HEADER DE CURSOS WPLMS
+============================================== */
 .wplms_courses_header select option {
     background: #222; /* fundo escuro no dropdown */
     color: #fff;
@@ -927,8 +1271,8 @@ background: transparent;
 
 .vibebp_message {
   background: rgba(255, 255, 255, 0.15) !important;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 16px;
@@ -940,10 +1284,14 @@ color: white !important;
 /* ==============================
    Liquid Glass - Course Overview
    ============================== */
+
+/* ==============================================
+   📖 VISÃO GERAL DO CURSO
+============================================== */
 .course_overview_wrapper {
     background: rgba(255, 255, 255, 0.15) !important;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 20px;
@@ -952,12 +1300,20 @@ color: white !important;
 }
 
 /* Hover suave */
+
+/* ==============================================
+   📖 VISÃO GERAL DO CURSO
+============================================== */
 .course_overview_wrapper:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Remove fundos internos */
+
+/* ==============================================
+   📖 VISÃO GERAL DO CURSO
+============================================== */
 .course_overview_wrapper * {
     background: transparent !important;
 }
@@ -1127,7 +1483,11 @@ color: white !important;
 
 
 
-.course_status .course_timeline
+.course_status 
+/* ==============================================
+   ⏳ TIMELINE DO CURSO
+============================================== */
+.course_timeline
 
  {
    
@@ -1135,6 +1495,10 @@ color: white !important;
 
 }
 
+
+/* ==============================================
+   ⏳ TIMELINE DO CURSO
+============================================== */
 .course_timeline {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px) saturate(180%);
@@ -1152,7 +1516,11 @@ color: white !important;
   background-image: none !important;
 }
 
-.course_status .course_timeline {
+.course_status 
+/* ==============================================
+   ⏳ TIMELINE DO CURSO
+============================================== */
+.course_timeline {
   background: transparent !important;
   background-color: transparent !important;
   background-image: none !important;
@@ -1160,7 +1528,11 @@ color: white !important;
 margin: 15px !important;
 }
 
-.course_status .course_timeline {
+.course_status 
+/* ==============================================
+   ⏳ TIMELINE DO CURSO
+============================================== */
+.course_timeline {
   background: rgba(255, 255, 255, 0.15) !important; /* fundo branco translúcido */
   backdrop-filter: blur(12px) !important; /* efeito vidro */
   -webkit-backdrop-filter: blur(12px) ;
@@ -1243,11 +1615,19 @@ margin: 20px !important;
 }
 
 /* Scrollbar estilo liquid glass clean */
+
+/* ==============================================
+   🖱️ SCROLLBAR E SELEÇÃO DE TEXTO
+============================================== */
 ::-webkit-scrollbar {
   width: 15px !important;
   height: 10px;
 }
 
+
+/* ==============================================
+   🖱️ SCROLLBAR E SELEÇÃO DE TEXTO
+============================================== */
 ::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px) saturate(150%);
@@ -1255,6 +1635,10 @@ margin: 20px !important;
   border-radius: 10px;
 }
 
+
+/* ==============================================
+   🖱️ SCROLLBAR E SELEÇÃO DE TEXTO
+============================================== */
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.25);
   border-radius: 10px;
@@ -1262,6 +1646,10 @@ margin: 20px !important;
   transition: background 0.3s ease;
 }
 
+
+/* ==============================================
+   🖱️ SCROLLBAR E SELEÇÃO DE TEXTO
+============================================== */
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.4);
 }
@@ -1284,6 +1672,10 @@ margin: 20px !important;
 }
 
 
+
+/* ==============================================
+   🏷️ CATEGORIAS DE CURSOS
+============================================== */
 .wplms_course_categories a {
     display: inline-block;
     padding: 10px 20px;
@@ -1291,14 +1683,18 @@ margin: 20px !important;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.15); /* vidro translúcido */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
     color: #fff; /* texto branco, ajuste se quiser */
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
 }
 
+
+/* ==============================================
+   🏷️ CATEGORIAS DE CURSOS
+============================================== */
 .wplms_course_categories a:hover {
     background: rgba(255, 255, 255, 0.25);
     border-color: rgba(255, 255, 255, 0.5);
@@ -1314,8 +1710,8 @@ display: inline-block;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.15) !important; /* vidro translúcido */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
     color: #fff; /* texto branco, ajuste se quiser */
     text-decoration: none;
     font-weight: 500;
@@ -1325,6 +1721,10 @@ display: inline-block;
 
 
 /* Container principal do curso */
+
+/* ==============================================
+   📋 GERENCIAMENTO DE CURSOS
+============================================== */
 .course_manage {
     background: rgba(255, 255, 255, 0.15); /* Transparência leve */
     backdrop-filter: blur(12px); /* Desfoque do fundo */
@@ -1337,6 +1737,10 @@ display: inline-block;
 }
 
 /* Efeito hover suave */
+
+/* ==============================================
+   📋 GERENCIAMENTO DE CURSOS
+============================================== */
 .course_manage:hover {
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
@@ -1513,6 +1917,10 @@ display: inline-block;
 
 
 /* Container principal */
+
+/* ==============================================
+   📂 SELECT DE CATEGORIAS PERSONALIZADAS
+============================================== */
 .categorias_select {
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(24px) saturate(220%);
@@ -1528,6 +1936,10 @@ display: inline-block;
 }
 
 /* Label */
+
+/* ==============================================
+   📂 SELECT DE CATEGORIAS PERSONALIZADAS
+============================================== */
 .categorias_select .term_select_label {
   display: flex;
   justify-content: space-between;
@@ -1541,20 +1953,36 @@ display: inline-block;
   -webkit-backdrop-filter: blur(20px) saturate(200%);
   transition: background 0.2s ease, transform 0.2s ease;
 }
+
+/* ==============================================
+   📂 SELECT DE CATEGORIAS PERSONALIZADAS
+============================================== */
 .categorias_select .term_select_label:hover {
   background: rgba(255, 255, 255, 0.25);
   transform: translateY(-1px);
 }
 
 /* Ícone */
+
+/* ==============================================
+   📂 SELECT DE CATEGORIAS PERSONALIZADAS
+============================================== */
 .categorias_select .term_select_label i {
   transition: transform 0.3s ease;
 }
+
+/* ==============================================
+   📂 SELECT DE CATEGORIAS PERSONALIZADAS
+============================================== */
 .categorias_select .term_select_label:hover i {
   transform: rotate(90deg);
 }
 
 /* Lista de termos */
+
+/* ==============================================
+   📂 SELECT DE CATEGORIAS PERSONALIZADAS
+============================================== */
 .categorias_select .search_term_list {
   margin-top: 12px;
   max-height: 240px;
@@ -1603,24 +2031,40 @@ display: inline-block;
 }
 
 /* Scroll personalizado */
-.search_term_list::-webkit-scrollbar {
+.search_term_list
+/* ==============================================
+   🖱️ SCROLLBAR E SELEÇÃO DE TEXTO
+============================================== */
+::-webkit-scrollbar {
   width: 8px;
 }
-.search_term_list::-webkit-scrollbar-thumb {
+.search_term_list
+/* ==============================================
+   🖱️ SCROLLBAR E SELEÇÃO DE TEXTO
+============================================== */
+::-webkit-scrollbar-thumb {
   background: rgba(255,255,255,0.3);
   border-radius: 8px;
 }
-.search_term_list::-webkit-scrollbar-track {
+.search_term_list
+/* ==============================================
+   🖱️ SCROLLBAR E SELEÇÃO DE TEXTO
+============================================== */
+::-webkit-scrollbar-track {
   background: transparent;
 }
 
 
 .taxonomy_field .search_term_list {
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--glass-blur)) !important;
+    -webkit-backdrop-filter: blur(var(--glass-blur)) !important;
  
 }
 /* Container geral */
+
+/* ==============================================
+   🛠️ TABS DE CRIAÇÃO DE CURSO
+============================================== */
 .wplms_course_creation_tabs {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
@@ -1631,10 +2075,14 @@ display: inline-block;
 }
 
 /* Itens individuais (abas) com efeito liquid glass clarinho */
+
+/* ==============================================
+   🛠️ TABS DE CRIAÇÃO DE CURSO
+============================================== */
 .wplms_course_creation_tabs ul li {
   background: rgba(255, 255, 255, 0.06) !important; /* clarinho */
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
+  backdrop-filter: blur(var(--glass-blur)) !important;
+  -webkit-backdrop-filter: blur(var(--glass-blur)) !important;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.15) !important;
   transition: background 0.3s ease, box-shadow 0.3s ease;
@@ -1643,12 +2091,20 @@ display: inline-block;
 }
 
 /* Hover */
+
+/* ==============================================
+   🛠️ TABS DE CRIAÇÃO DE CURSO
+============================================== */
 .wplms_course_creation_tabs ul li:hover {
   background: rgba(255, 255, 255, 0.12) !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
 }
 
 /* Aba ativa */
+
+/* ==============================================
+   🛠️ TABS DE CRIAÇÃO DE CURSO
+============================================== */
 .wplms_course_creation_tabs ul li.active {
   background: rgba(255, 255, 255, 0.14) !important;
   border: 1px solid rgba(255, 255, 255, 0.25) !important;
@@ -1705,8 +2161,8 @@ display: inline-block;
 }
 
 .wplms_create_course_overlay{
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 .vibe_save_course_components_button .field_value a.button.major:hover {
@@ -1790,10 +2246,14 @@ display: inline-block;
 }
 
 /* Container principal */
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE CURSO
+============================================== */
 #course_settings {
   background: rgba(255, 255, 255, 0.15) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 20px;
@@ -1804,25 +2264,45 @@ display: inline-block;
 }
 
 /* Hover suave */
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE CURSO
+============================================== */
 #course_settings:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Remove fundos internos */
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE CURSO
+============================================== */
 #course_settings * {
   background: transparent !important;
   color: #fff !important;
 }
 
 /* Labels e títulos */
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE CURSO
+============================================== */
 #course_settings label,
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE CURSO
+============================================== */
 #course_settings strong {
   color: #fff !important;
   text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 /* Botões */
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE CURSO
+============================================== */
 #course_settings .button {
   background: var(--glass-bg) !important;
   color: #fff !important;
@@ -1830,14 +2310,30 @@ display: inline-block;
   border-radius: 8px;
   transition: all 0.3s ease;
 }
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE CURSO
+============================================== */
 #course_settings .button:hover {
   background: rgba(255,255,255,0.3) !important;
   transform: translateY(-2px);
 }
 
 /* Campos de input / select / number */
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE CURSO
+============================================== */
 #course_settings input,
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE CURSO
+============================================== */
 #course_settings select,
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE CURSO
+============================================== */
 #course_settings textarea {
   background: rgba(255,255,255,0.1) !important;
   border:var(--glass-border) !important;
@@ -1847,15 +2343,27 @@ display: inline-block;
 }
 
 /* Switches (checkbox custom) */
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE CURSO
+============================================== */
 #course_settings .switch input:checked + label {
   background: rgba(255,255,255,0.3) !important;
 }
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE CURSO
+============================================== */
 #course_settings .switch label {
   background: var(--glass-bg) !important;
   border:var(--glass-border) !important;
 }
 
 /* Áreas de editor */
+
+/* ==============================================
+   ⚙️ CONFIGURAÇÕES DE CURSO
+============================================== */
 #course_settings .vibe_editor {
   background: rgba(255,255,255,0.1) !important;
   border-radius: 12px;
@@ -1863,10 +2371,14 @@ display: inline-block;
 }
 
 /* Container principal do currículo */
+
+/* ==============================================
+   📚 CONSTRUTOR DE CURRÍCULO
+============================================== */
 .course_curriculum_builder_wrapper {
   background: rgba(255, 255, 255, 0.15) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 20px;
@@ -1877,12 +2389,20 @@ display: inline-block;
 }
 
 /* Hover suave */
+
+/* ==============================================
+   📚 CONSTRUTOR DE CURRÍCULO
+============================================== */
 .course_curriculum_builder_wrapper:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Remove fundos internos */
+
+/* ==============================================
+   📚 CONSTRUTOR DE CURRÍCULO
+============================================== */
 .course_curriculum_builder_wrapper * {
   background: transparent !important;
   color: #fff !important;
@@ -1958,10 +2478,14 @@ display: inline-block;
 
 
 /* Container principal do pricing */
+
+/* ==============================================
+   💲 DEFINIÇÃO DE PREÇOS
+============================================== */
 #course_pricing {
   background: rgba(255, 255, 255, 0.15) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 20px;
@@ -1972,12 +2496,20 @@ display: inline-block;
 }
 
 /* Hover suave */
+
+/* ==============================================
+   💲 DEFINIÇÃO DE PREÇOS
+============================================== */
 #course_pricing:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Remove fundos internos */
+
+/* ==============================================
+   💲 DEFINIÇÃO DE PREÇOS
+============================================== */
 #course_pricing * {
   background: transparent !important;
   color: #fff !important;
@@ -2031,10 +2563,14 @@ display: inline-block;
 
 
 /* Container principal do Course Components */
+
+/* ==============================================
+   🧩 COMPONENTES DO CURSO
+============================================== */
 .course_components {
   background: rgba(255, 255, 255, 0.15) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 20px;
@@ -2045,18 +2581,30 @@ display: inline-block;
 }
 
 /* Hover suave */
+
+/* ==============================================
+   🧩 COMPONENTES DO CURSO
+============================================== */
 .course_components:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Remove fundos internos */
+
+/* ==============================================
+   🧩 COMPONENTES DO CURSO
+============================================== */
 .course_components * {
   background: transparent !important;
   color: #fff !important;
 }
 
 /* Campos de grupo do curso */
+
+/* ==============================================
+   🧩 COMPONENTES DO CURSO
+============================================== */
 .course_components .coursegroups {
   background: rgba(255,255,255,0.1) !important;
   border:var(--glass-border);
@@ -2071,15 +2619,27 @@ display: inline-block;
 }
 
 /* Ícones dentro do grupo */
+
+/* ==============================================
+   🧩 COMPONENTES DO CURSO
+============================================== */
 .course_components .coursegroups .vicon {
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
+
+/* ==============================================
+   🧩 COMPONENTES DO CURSO
+============================================== */
 .course_components .coursegroups .vicon:hover {
   opacity: 1;
 }
 
 /* Botões de navegação (Avançar / Voltar) */
+
+/* ==============================================
+   🧩 COMPONENTES DO CURSO
+============================================== */
 .course_components .button.major {
   background: var(--glass-bg) !important;
   color: #fff !important;
@@ -2088,6 +2648,10 @@ display: inline-block;
   padding: 10px 16px;
   transition: all 0.3s ease;
 }
+
+/* ==============================================
+   🧩 COMPONENTES DO CURSO
+============================================== */
 .course_components .button.major:hover {
   background: rgba(255,255,255,0.3) !important;
   transform: translateY(-2px);
@@ -2217,7 +2781,11 @@ display: inline-block;
 }
 
 /* Container dos certificados */
-.my_certificates.course_blocks {
+.my_certificates
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
+.course_blocks {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
