@@ -1,6 +1,16 @@
 
 /* INICIO LIQUID GLASS */
 
+
+:root {
+  /* Variáveis para efeito Glassmorphism claro */
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-blur: 10px;
+  --glass-radius: 16px;
+  --glass-border: 1px solid rgba(255, 255, 255, 0.3);
+  --glass-transition: all 0.3s ease;
+}
+
 /* Garante que o fundo ocupe toda a tela */
 html, body {
     width: 100%;
@@ -22,11 +32,11 @@ html, body {
 .wrapper,
 .mycourses_header,
 .vibebp_left_sidebar_wrapper {
-    background: rgba(255,255,255,0.15) !important;
+    background: var(--glass-bg) !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 16px;
-    border: 1px solid rgba(255,255,255,0.3);
+    border:var(--glass-border);
     transition: all 0.3s ease;
 }
 
@@ -76,7 +86,7 @@ background: transparent;
 .course_blocks .course_block_actions .button {
     background: rgba(255, 255, 255, 0.15) !important;
     color: #fff !important;
-    border: 1px solid rgba(255,255,255,0.3) !important;
+    border:var(--glass-border) !important;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: 8px;
@@ -316,7 +326,7 @@ background: transparent;
 .course_blocks .course_block_actions .button {
     background: rgba(255, 255, 255, 0.15) !important;
     color: #fff !important;
-    border: 1px solid rgba(255,255,255,0.3) !important;
+    border:var(--glass-border) !important;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: 8px;
@@ -383,7 +393,7 @@ background: transparent;
 .vibebp_course .course_card .courseitem .button {
     background: rgba(255, 255, 255, 0.15) !important;
     color: #fff !important;
-    border: 1px solid rgba(255,255,255,0.3) !important;
+    border:var(--glass-border) !important;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: 8px;
@@ -760,7 +770,7 @@ background: transparent;
    ============================== */
 
 .course_instructor_block {
-   background: rgba(255,255,255,0.15) !important;
+   background: var(--glass-bg) !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 16px;
@@ -863,7 +873,7 @@ background: transparent;
 .wplms_courses_header .link {
     background: rgba(255, 255, 255, 0.15) !important;
     color: #fff !important;
-    border: 1px solid rgba(255,255,255,0.3) !important;
+    border:var(--glass-border) !important;
     border-radius: 8px;
     padding: 6px 12px;
     transition: all 0.3s ease;
@@ -877,7 +887,7 @@ background: transparent;
 /* Campo de busca */
 .wplms_courses_header input[type="text"] {
     background: rgba(255,255,255,0.1) !important;
-    border: 1px solid rgba(255,255,255,0.3);
+    border:var(--glass-border);
     color: #fff !important;
     padding: 6px 10px;
     border-radius: 8px;
@@ -897,7 +907,7 @@ background: transparent;
 /* Select */
 .wplms_courses_header select {
     background: rgba(255,255,255,0.1) !important;
-    border: 1px solid rgba(255,255,255,0.3);
+    border:var(--glass-border);
     border-radius: 8px;
     padding: 6px 12px;
     color: #fff;
@@ -985,9 +995,9 @@ color: white !important;
 
 /* Botão principal */
 .course_overview .course_header_description .button.is-primary {
-    background: rgba(255,255,255,0.15) !important;
+    background: var(--glass-bg) !important;
     color: #fff !important;
-    border: 1px solid rgba(255,255,255,0.3) !important;
+    border:var(--glass-border) !important;
     border-radius: 8px;
     padding: 10px 16px;
     margin: 12px 0;
@@ -1023,7 +1033,7 @@ color: white !important;
 
 /* Abas do curso */
 .course_overview .instructor_tabs span {
-    background: rgba(255,255,255,0.15) !important;
+    background: var(--glass-bg) !important;
     color: #fff;
     padding: 6px 12px;
     border-radius: 8px;
@@ -1369,7 +1379,7 @@ display: inline-block;
 
 /* Tabs do curso */
 .course_tabs .instructor_tabs span {
-    background: rgba(255,255,255,0.15);
+    background: var(--glass-bg);
     color: #fff;
     padding: 8px 15px;
     border-radius: 12px;
@@ -1421,7 +1431,7 @@ display: inline-block;
 
 /* Botões de ações em massa */
 .bulk_action span {
-    background: rgba(255,255,255,0.15);
+    background: var(--glass-bg);
     padding: 8px 12px;
     border-radius: 12px;
     margin-right: 6px;
@@ -1480,10 +1490,10 @@ display: inline-block;
 .custom-select, 
 .custom-select .selected, 
 .custom-select .options li {
-  background: rgba(255,255,255,0.15);
+  background: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.3);
+  border:var(--glass-border);
   border-radius: 12px;
   color: black !important;
   padding: 8px 12px;
@@ -1555,7 +1565,7 @@ display: inline-block;
   -webkit-backdrop-filter: blur(22px) saturate(200%);
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,0.25);
-  box-shadow: inset 0 0 16px rgba(255,255,255,0.15), 0 6px 24px rgba(0,0,0,0.25);
+  box-shadow: inset 0 0 16px var(--glass-bg), 0 6px 24px rgba(0,0,0,0.25);
   transition: all 0.3s ease;
 }
 
@@ -1814,9 +1824,9 @@ display: inline-block;
 
 /* Botões */
 #course_settings .button {
-  background: rgba(255,255,255,0.15) !important;
+  background: var(--glass-bg) !important;
   color: #fff !important;
-  border: 1px solid rgba(255,255,255,0.3) !important;
+  border:var(--glass-border) !important;
   border-radius: 8px;
   transition: all 0.3s ease;
 }
@@ -1830,7 +1840,7 @@ display: inline-block;
 #course_settings select,
 #course_settings textarea {
   background: rgba(255,255,255,0.1) !important;
-  border: 1px solid rgba(255,255,255,0.3) !important;
+  border:var(--glass-border) !important;
   border-radius: 8px;
   color: #fff !important;
   padding: 6px 10px;
@@ -1841,8 +1851,8 @@ display: inline-block;
   background: rgba(255,255,255,0.3) !important;
 }
 #course_settings .switch label {
-  background: rgba(255,255,255,0.15) !important;
-  border: 1px solid rgba(255,255,255,0.3) !important;
+  background: var(--glass-bg) !important;
+  border:var(--glass-border) !important;
 }
 
 /* Áreas de editor */
@@ -1888,7 +1898,7 @@ display: inline-block;
 /* Elementos do currículo */
 .course_curriculum .curriculum_field {
   background: rgba(255,255,255,0.1) !important;
-  border: 1px solid rgba(255,255,255,0.3) !important;
+  border:var(--glass-border) !important;
   border-radius: 12px;
   padding: 12px;
   margin: 10px 0;
@@ -1910,9 +1920,9 @@ display: inline-block;
 
 /* Botões de ação (Adicionar seção, unidade, quiz, etc.) */
 .add_curriculum_element .button {
-  background: rgba(255,255,255,0.15) !important;
+  background: var(--glass-bg) !important;
   color: #fff !important;
-  border: 1px solid rgba(255,255,255,0.3) !important;
+  border:var(--glass-border) !important;
   border-radius: 8px;
   padding: 8px 14px;
   margin: 6px;
@@ -1925,9 +1935,9 @@ display: inline-block;
 
 /* Botões de navegação (Avançar/Voltar) */
 .vibe_save_curriculum_button .button {
-  background: rgba(255,255,255,0.15) !important;
+  background: var(--glass-bg) !important;
   color: #fff !important;
-  border: 1px solid rgba(255,255,255,0.3) !important;
+  border:var(--glass-border) !important;
   border-radius: 8px;
   transition: all 0.3s ease;
 }
@@ -1987,7 +1997,7 @@ display: inline-block;
 /* Campos de preço */
 .course_pricing .course_product_price {
   background: rgba(255,255,255,0.1) !important;
-  border: 1px solid rgba(255,255,255,0.3);
+  border:var(--glass-border);
   border-radius: 12px;
   padding: 10px 14px;
   display: inline-flex;
@@ -2007,9 +2017,9 @@ display: inline-block;
 
 /* Botões principais */
 .course_pricing .button.major {
-  background: rgba(255,255,255,0.15) !important;
+  background: var(--glass-bg) !important;
   color: #fff !important;
-  border: 1px solid rgba(255,255,255,0.3) !important;
+  border:var(--glass-border) !important;
   border-radius: 8px;
   padding: 10px 16px;
   transition: all 0.3s ease;
@@ -2049,7 +2059,7 @@ display: inline-block;
 /* Campos de grupo do curso */
 .course_components .coursegroups {
   background: rgba(255,255,255,0.1) !important;
-  border: 1px solid rgba(255,255,255,0.3);
+  border:var(--glass-border);
   border-radius: 12px;
   padding: 10px 14px;
   display: inline-flex;
@@ -2071,9 +2081,9 @@ display: inline-block;
 
 /* Botões de navegação (Avançar / Voltar) */
 .course_components .button.major {
-  background: rgba(255,255,255,0.15) !important;
+  background: var(--glass-bg) !important;
   color: #fff !important;
-  border: 1px solid rgba(255,255,255,0.3) !important;
+  border:var(--glass-border) !important;
   border-radius: 8px;
   padding: 10px 16px;
   transition: all 0.3s ease;
@@ -2130,7 +2140,7 @@ display: inline-block;
 #create_course .media_wrapper,
 #create_course .featured_video_options {
   background: rgba(255,255,255,0.06) !important;
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid var(--glass-bg);
   border-radius: 12px;
   padding: 10px;
   margin-bottom: 12px;
@@ -2139,9 +2149,9 @@ display: inline-block;
 /* Botões principais */
 #create_course .button.major,
 #create_course .vibe_save_course_button .button.is-primary {
-  background: rgba(255,255,255,0.15) !important;
+  background: var(--glass-bg) !important;
   color: #fff !important;
-  border: 1px solid rgba(255,255,255,0.3) !important;
+  border:var(--glass-border) !important;
   border-radius: 8px;
   padding: 10px 16px;
   transition: all 0.3s ease;
@@ -2165,7 +2175,7 @@ display: inline-block;
 /* Mini cartões de duração, número de vagas, datas e switches */
 #create_course .create_course_grid_panel .grid > div {
   background: rgba(255,255,255,0.06) !important;
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid var(--glass-bg);
   border-radius: 12px;
   padding: 10px 12px;
   margin-bottom: 10px;
@@ -2260,7 +2270,7 @@ display: inline-block;
 /* Mensagem quando não há certificados */
 .vbp_message {
   background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid var(--glass-bg);
   border-radius: 12px;
   padding: 12px;
   color: #fff;
