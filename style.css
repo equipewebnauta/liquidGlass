@@ -1157,6 +1157,7 @@ background: transparent;
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
+    filter: url(#liquidglass) !important;
     transition: all 0.3s ease;
 }
 
