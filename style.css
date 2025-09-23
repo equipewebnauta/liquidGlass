@@ -1185,7 +1185,7 @@ background: transparent;
 /* ==============================================
    📑 HEADER DE CURSOS WPLMS
 ============================================== */
-.wplms_courses_header .button,
+
 
 /* ==============================================
    📑 HEADER DE CURSOS WPLMS
@@ -1202,7 +1202,6 @@ background: transparent;
 /* ==============================================
    📑 HEADER DE CURSOS WPLMS
 ============================================== */
-.wplms_courses_header .button:hover,
 
 /* ==============================================
    📑 HEADER DE CURSOS WPLMS
@@ -1242,6 +1241,8 @@ background: transparent;
     color: #fff;
     margin-left: -28px;
     pointer-events: none;
+    filter: url(#liquidglass) !important;
+
 }
 
 /* Select */
