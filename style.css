@@ -9,9 +9,10 @@
 :root {
   /* Variáveis para efeito Glassmorphism claro */
   --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-bg2: var(--glass-bg2);
   --glass-blur: 10px;
   --glass-radius: 16px;
-  --glass-border: 1px solid rgba(255, 255, 255, 0.3);
+  --glass-border: 1px solid var(--glass-bg2);
   --glass-transition: all 0.3s ease;
 }
 
@@ -101,7 +102,7 @@ background: transparent;
    📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
 ============================================== */
 .course_blocks .course_label span.active {
-    background: rgba(255, 255, 255, 0.2) !important;
+    background: var(--glass-bg2) !important;
     color: #fff;
     padding: 4px 8px;
     border-radius: 8px;
@@ -116,7 +117,7 @@ background: transparent;
    📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
 ============================================== */
 .course_blocks .course_block_actions .button {
-    background: rgba(255, 255, 255, 0.15) !important;
+    background: var(--glass-bg) !important;
     color: #fff !important;
     border:var(--glass-border) !important;
     backdrop-filter: blur(5px);
@@ -130,17 +131,17 @@ background: transparent;
    📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
 ============================================== */
 .course_blocks .course_block_actions .button:hover {
-    background: rgba(255, 255, 255, 0.3) !important;
+    background: var(--glass-bg2) !important;
     transform: translateY(-2px);
 }
 
 /* Fundo principal do cabeçalho dos cursos */
 .mycourses_header {
-    background: rgba(255, 255, 255, 0.15) !important; /* translúcido */
+    background: var(--glass-bg) !important; /* translúcido */
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--glass-bg2);
     padding: 16px;
     display: flex;
     flex-wrap: wrap;
@@ -162,9 +163,9 @@ background: transparent;
 
 /* Botões de abas */
 .mycourses_access_tabs .button {
-    background: rgba(255, 255, 255, 0.15) !important;
+    background: var(--glass-bg) !important;
     color: #fff !important;
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border: 1px solid var(--glass-bg2) !important;
     border-radius: 8px;
     padding: 8px 16px;
     margin-right: 8px;
@@ -173,15 +174,15 @@ background: transparent;
 
 .mycourses_access_tabs .button.active,
 .mycourses_access_tabs .button:hover {
-    background: rgba(255, 255, 255, 0.3) !important;
+    background: var(--glass-bg2) !important;
     transform: translateY(-2px);
 }
 
 /* Inputs de busca */
 .mycourses_header .searchbox input {
-    background: rgba(255, 255, 255, 0.15) !important;
+    background: var(--glass-bg) !important;
     color: #fff !important;
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border: 1px solid var(--glass-bg2) !important;
     border-radius: 8px;
     padding: 8px 12px;
     backdrop-filter: blur(5px);
@@ -196,9 +197,9 @@ background: transparent;
 
 /* Selects */
 .mycourses_header select {
-    background: rgba(255, 255, 255, 0.15) !important;
+    background: var(--glass-bg) !important;
     color: #fff !important;
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border: 1px solid var(--glass-bg2) !important;
     border-radius: 8px;
     padding: 8px 12px;
     backdrop-filter: blur(5px);
@@ -214,11 +215,11 @@ background: transparent;
 
 /* Fundo principal do menu de perfil */
 .profile_menu {
-    background: rgba(255, 255, 255, 0.15) !important; /* translúcido */
+    background: var(--glass-bg) !important; /* translúcido */
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--glass-bg2);
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     margin: 15px !important;
@@ -320,11 +321,11 @@ background: transparent;
    📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
 ============================================== */
 .course_blocks .course_block_wrap {
-    background: rgba(255, 255, 255, 0.15) !important; /* translúcido */
+    background: var(--glass-bg) !important; /* translúcido */
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--glass-bg2);
     padding: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -370,7 +371,7 @@ background: transparent;
    📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
 ============================================== */
 .course_blocks .course_label span.active {
-    background: rgba(255, 255, 255, 0.2) !important;
+    background: var(--glass-bg2) !important;
     color: #fff;
     padding: 4px 8px;
     border-radius: 8px;
@@ -384,7 +385,7 @@ background: transparent;
    📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
 ============================================== */
 .course_blocks .course_block_actions .button {
-    background: rgba(255, 255, 255, 0.15) !important;
+    background: var(--glass-bg) !important;
     color: #fff !important;
     border:var(--glass-border) !important;
     backdrop-filter: blur(5px);
@@ -398,7 +399,7 @@ background: transparent;
    📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
 ============================================== */
 .course_blocks .course_block_actions .button:hover {
-    background: rgba(255, 255, 255, 0.3) !important;
+    background: var(--glass-bg2) !important;
     transform: translateY(-2px);
 }
 
@@ -411,11 +412,11 @@ background: transparent;
    🎓 BLOCO DE CURSO VIBEBP (Cards Individuais)
 ============================================== */
 .vibebp_course .course_card .courseitem {
-    background: rgba(255, 255, 255, 0.15) !important; /* translúcido */
+    background: var(--glass-bg) !important; /* translúcido */
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--glass-bg2);
     padding: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 
@@ -487,7 +488,7 @@ background: transparent;
    🎓 BLOCO DE CURSO VIBEBP (Cards Individuais)
 ============================================== */
 .vibebp_course .course_card .courseitem .button {
-    background: rgba(255, 255, 255, 0.15) !important;
+    background: var(--glass-bg) !important;
     color: #fff !important;
     border:var(--glass-border) !important;
     backdrop-filter: blur(5px);
@@ -501,7 +502,7 @@ background: transparent;
    🎓 BLOCO DE CURSO VIBEBP (Cards Individuais)
 ============================================== */
 .vibebp_course .course_card .courseitem .button:hover {
-    background: rgba(255, 255, 255, 0.3) !important;
+    background: var(--glass-bg2) !important;
     transform: translateY(-2px);
 }
 
@@ -515,7 +516,7 @@ background: transparent;
    ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
 ============================================== */
 .profile_settings .portal {
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: var(--glass-bg) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 16px;
@@ -582,7 +583,7 @@ background: transparent;
    ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
 ============================================== */
 .profile_settings .settings_tabs .setting_tab {
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: var(--glass-bg) !important;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 8px;
   padding: 8px 14px;
@@ -601,7 +602,7 @@ background: transparent;
    ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
 ============================================== */
 .profile_settings .settings_tabs .setting_tab.active {
-  background: rgba(255, 255, 255, 0.3) !important;
+  background: var(--glass-bg2) !important;
 }
 
 /* ==============================
@@ -617,7 +618,7 @@ background: transparent;
    ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
 ============================================== */
 .profile_settings select {
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: var(--glass-bg) !important;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 8px;
   padding: 8px 12px;
@@ -666,7 +667,7 @@ background: transparent;
    ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
 ============================================== */
 .profile_settings .button {
-  background: rgba(255, 255, 255, 0.2) !important;
+  background: var(--glass-bg2) !important;
   color: #fff !important;
   border: 1px solid rgba(255, 255, 255, 0.25) !important;
   border-radius: 8px;
@@ -714,7 +715,7 @@ background: transparent;
    ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
 ============================================== */
 .profile_settings .switch .slider {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--glass-bg2);
   border-radius: 30px;
   cursor: pointer;
   position: relative;
@@ -783,7 +784,7 @@ background: transparent;
    ⚙️ CONFIGURAÇÕES DE PERFIL (Forms, Portais)
 ============================================== */
 .profile_settings .my-logins .login_val {
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--glass-bg);
   padding: 10px 14px;
   border-radius: 12px;
   margin-bottom: 10px;
@@ -817,7 +818,7 @@ background: transparent;
    🔎 CABEÇALHO PRINCIPAL - PESQUISA & FILTROS
 ============================================== */
 .vibebp_main_header {
-  background: rgba(255, 255, 255, 0.15); /* vidro translúcido */
+  background: var(--glass-bg); /* vidro translúcido */
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(12px);
@@ -836,7 +837,7 @@ background: transparent;
   width: 100%;
   padding: 10px 15px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--glass-bg2);
   background: rgba(255, 255, 255, 0.25);
   color: #fff;
   outline: none;
@@ -859,7 +860,7 @@ background: transparent;
 ============================================== */
 .vibebp_main_header .buttons .button {
   background: rgba(255, 255, 255, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--glass-bg2);
   border-radius: 10px;
   color: #fff;
   margin: 0 5px;
@@ -891,7 +892,7 @@ background: transparent;
 ============================================== */
 .vibebp_main_header .order_sorter select {
  background: rgba(154, 92, 31, 0.6); /* tom baseado na sua paleta */
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--glass-bg2);
   border-radius: 8px;
   padding: 6px 10px;
   color: #fff;
@@ -926,7 +927,7 @@ background: transparent;
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
   border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--glass-bg2);
   padding: 20px;
   margin: 20px 0;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
@@ -938,7 +939,7 @@ background: transparent;
    🔎 CABEÇALHO PRINCIPAL - PESQUISA & FILTROS
 ============================================== */
 .vibebp_main_header.vibebp_form {
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--glass-bg);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border-radius: 12px;
@@ -1042,7 +1043,7 @@ background: transparent;
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--glass-bg2);
     padding: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -1143,11 +1144,11 @@ background: transparent;
    📑 HEADER DE CURSOS WPLMS
 ============================================== */
 .wplms_courses_header {
-    background: rgba(255, 255, 255, 0.15) !important;
+    background: var(--glass-bg) !important;
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--glass-bg2);
     padding: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -1187,7 +1188,7 @@ background: transparent;
    📑 HEADER DE CURSOS WPLMS
 ============================================== */
 .wplms_courses_header .link {
-    background: rgba(255, 255, 255, 0.15) !important;
+    background: var(--glass-bg) !important;
     color: #fff !important;
     border:var(--glass-border) !important;
     border-radius: 8px;
@@ -1204,7 +1205,7 @@ background: transparent;
    📑 HEADER DE CURSOS WPLMS
 ============================================== */
 .wplms_courses_header .link:hover {
-    background: rgba(255, 255, 255, 0.3) !important;
+    background: var(--glass-bg2) !important;
     transform: translateY(-2px);
 }
 
@@ -1270,11 +1271,11 @@ background: transparent;
 
 
 .vibebp_message {
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: var(--glass-bg) !important;
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--glass-bg2);
     padding: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 color: white !important;
@@ -1289,11 +1290,11 @@ color: white !important;
    📖 VISÃO GERAL DO CURSO
 ============================================== */
 .course_overview_wrapper {
-    background: rgba(255, 255, 255, 0.15) !important;
+    background: var(--glass-bg) !important;
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--glass-bg2);
     padding: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -1503,7 +1504,7 @@ color: white !important;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--glass-bg2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -1533,12 +1534,12 @@ margin: 15px !important;
    ⏳ TIMELINE DO CURSO
 ============================================== */
 .course_timeline {
-  background: rgba(255, 255, 255, 0.15) !important; /* fundo branco translúcido */
+  background: var(--glass-bg) !important; /* fundo branco translúcido */
   backdrop-filter: blur(12px) !important; /* efeito vidro */
   -webkit-backdrop-filter: blur(12px) ;
   
   border-radius: 16px !important; /* cantos arredondados */
-  border: 1px solid rgba(255, 255, 255, 0.2) !important; /* borda sutil */
+  border: 1px solid var(--glass-bg2) !important; /* borda sutil */
   
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important; /* sombra elegante */
   
@@ -1554,7 +1555,7 @@ margin: 15px !important;
 .unit_prevnext .navigate_unit,
 .course_content_content_wrapper,
 .next_curriculum_item {
-  background: rgba(255, 255, 255, 0.15) !important; /* branco translúcido */
+  background: var(--glass-bg) !important; /* branco translúcido */
   backdrop-filter: blur(12px)  !important;
   -webkit-backdrop-filter: blur(12px) ;
   border: 1px solid rgba(255, 255, 255, 0.25); /* borda discreta */
@@ -1681,8 +1682,8 @@ margin: 20px !important;
     padding: 10px 20px;
     margin: 5px;
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.15); /* vidro translúcido */
+    border: 1px solid var(--glass-bg2);
+    background: var(--glass-bg); /* vidro translúcido */
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     color: #fff; /* texto branco, ajuste se quiser */
@@ -1708,8 +1709,8 @@ display: inline-block;
     padding: 10px 20px;
     margin: 5px;
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.15) !important; /* vidro translúcido */
+    border: 1px solid var(--glass-bg2);
+    background: var(--glass-bg) !important; /* vidro translúcido */
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     color: #fff; /* texto branco, ajuste se quiser */
@@ -1726,11 +1727,11 @@ display: inline-block;
    📋 GERENCIAMENTO DE CURSOS
 ============================================== */
 .course_manage {
-    background: rgba(255, 255, 255, 0.15); /* Transparência leve */
+    background: var(--glass-bg); /* Transparência leve */
     backdrop-filter: blur(12px); /* Desfoque do fundo */
     -webkit-backdrop-filter: blur(12px);
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--glass-bg2);
     padding: 20px;
     margin-bottom: 20px;
     transition: all 0.3s ease;
@@ -1849,10 +1850,10 @@ display: inline-block;
 .students_filter.vibebp_form input,
 .students_filter.vibebp_form select,
 .students_filter.vibebp_form .vicon {
-    background: rgba(255, 255, 255, 0.15) !important;
+    background: var(--glass-bg) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border: 1px solid var(--glass-bg2) !important;
     border-radius: 12px !important;
     color: #fff !important; /* Cor do texto do input e select */
     margin-inline: 2px !important;
@@ -1926,7 +1927,7 @@ display: inline-block;
   backdrop-filter: blur(24px) saturate(220%);
   -webkit-backdrop-filter: blur(24px) ;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--glass-bg2);
   box-shadow: 0 12px 32px rgba(0,0,0,0.35);
   padding: 16px;
   max-width: 380px;
@@ -2066,7 +2067,7 @@ display: inline-block;
    🛠️ TABS DE CRIAÇÃO DE CURSO
 ============================================== */
 .wplms_course_creation_tabs {
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 20px;
@@ -2084,7 +2085,7 @@ display: inline-block;
   backdrop-filter: blur(var(--glass-blur)) !important;
   -webkit-backdrop-filter: blur(var(--glass-blur)) !important;
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid var(--glass-bg) !important;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 
   margin-inline: 5px 0 !important;
@@ -2113,7 +2114,7 @@ display: inline-block;
 
 
 .vibe_publish_course .field_wrapper:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--glass-bg2);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
@@ -2130,7 +2131,7 @@ display: inline-block;
   padding: 12px 24px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--glass-bg2);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: #222;
@@ -2147,7 +2148,7 @@ display: inline-block;
 
 
 .vibe_save_course_components_button .field_wrapper:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--glass-bg2);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
@@ -2180,7 +2181,7 @@ display: inline-block;
 }
 
 .vibe_save_course_settings_button .field_wrapper:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--glass-bg2);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
@@ -2189,7 +2190,7 @@ display: inline-block;
   padding: 12px 24px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--glass-bg2);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: #222;
@@ -2213,11 +2214,11 @@ display: inline-block;
     max-width: 320px;
     font-size: 1rem;
     vertical-align: middle;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--glass-bg2);
     border-radius: 12px;
 
     /* liquid glass */
-    background: rgba(255, 255, 255, 0.15) !important;
+    background: var(--glass-bg) !important;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
@@ -2251,11 +2252,11 @@ display: inline-block;
    ⚙️ CONFIGURAÇÕES DE CURSO
 ============================================== */
 #course_settings {
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: var(--glass-bg) !important;
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--glass-bg2);
   padding: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -2376,11 +2377,11 @@ display: inline-block;
    📚 CONSTRUTOR DE CURRÍCULO
 ============================================== */
 .course_curriculum_builder_wrapper {
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: var(--glass-bg) !important;
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--glass-bg2);
   padding: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -2483,11 +2484,11 @@ display: inline-block;
    💲 DEFINIÇÃO DE PREÇOS
 ============================================== */
 #course_pricing {
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: var(--glass-bg) !important;
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--glass-bg2);
   padding: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -2568,11 +2569,11 @@ display: inline-block;
    🧩 COMPONENTES DO CURSO
 ============================================== */
 .course_components {
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: var(--glass-bg) !important;
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--glass-bg2);
   padding: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -2861,7 +2862,7 @@ display: inline-block;
   background: rgba(255, 255, 255, 0.15 ) !important;
   backdrop-filter: blur(8px) !important;
   -webkit-backdrop-filter: blur(8px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--glass-bg2);
   border-radius: 12px;
   color: #fff;
 
@@ -2869,7 +2870,7 @@ display: inline-block;
 
 /* Hover suave */
 .button.is-primary.new_mail:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--glass-bg2);
   transform: translateY(-2px);
   box-shadow: 0 10px 28px rgba(0,0,0,0.12);
 }
@@ -2950,7 +2951,7 @@ display: inline-block;
 
 .dashboard_widget.dash_wplms_dash_text {
   background: transparent !important;
-  background: rgba(255, 255, 255, 0.15) !important; /* vidro translúcido */
+  background: var(--glass-bg) !important; /* vidro translúcido */
   border-radius: 16px ;
   backdrop-filter: blur(12px)  !important;
   -webkit-backdrop-filter: blur(12px)  !important ;
