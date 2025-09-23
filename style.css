@@ -50,7 +50,7 @@ html, body {
     -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
     border:var(--glass-border);
-    
+    filter:url(#liquidglass) !important;
     transition: all 0.3s ease;
 }
 
