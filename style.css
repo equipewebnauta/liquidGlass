@@ -2371,6 +2371,7 @@ display: inline-block;
 
 
 .dashboard_widget.dash_wplms_dash_text {
+  background: transparent !important;
   background: rgba(255, 255, 255, 0.15) !important; /* vidro translúcido */
   border-radius: 16px ;
   backdrop-filter: blur(12px)  !important;
