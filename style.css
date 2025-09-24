@@ -37,6 +37,7 @@ html, body {
 /* Remove qualquer fundo branco dos elementos principais */
 
 /* Opcional: aplicar glassmorphism em containers principais */
+
 /* ========== VARIÁVEIS ========== */
 :root{
   --glass-bg: rgba(255,255,255,0.12);
@@ -257,6 +258,286 @@ html, body {
 .profile_menu .menu_bottom .menu_item:hover {
     background: rgba(255,255,255,0.25) !important; transform: translateY(-1px);
 }
+
+/* ==============================================
+   📦 CONTAINERS PRINCIPAIS (Wrapper, Sidebar, etc.)
+============================================== */
+.container,
+.wrapper,
+.mycourses_header,
+.vibebp_left_sidebar_wrapper {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-radius: 16px;
+    border:var(--glass-border);
+   
+    transition: all 0.3s ease;
+}
+
+
+
+
+.vibebp_main {
+background: transparent;
+}
+
+
+
+
+/* Hover suave */
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
+.course_blocks .course_block_wrap:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove fundos brancos internos */
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
+.course_blocks .course_block_wrap * {
+    background: transparent !important;
+}
+
+/* Imagens dos cursos */
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
+.course_blocks .course_featured_image img {
+    border-radius: 12px 0 0 ;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* Labels de status */
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
+.course_blocks .course_label span.active {
+    background: var(--glass-bg2) !important;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-weight: 600;
+     filter:url(#liquidglass) !important;
+}
+
+
+
+/* Botões */
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
+.course_blocks .course_block_actions .button {
+    background: var(--glass-bg) !important;
+    color: #fff !important;
+    border:var(--glass-border) !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+
+/* ==============================================
+   📚 BLOCO DE CURSOS - LISTAGEM PRINCIPAL
+============================================== */
+.course_blocks .course_block_actions .button:hover {
+    background: var(--glass-bg2) !important;
+    transform: translateY(-2px);
+}
+
+/* Fundo principal do cabeçalho dos cursos */
+.mycourses_header {
+    background: var(--glass-bg) !important; /* translúcido */
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-radius: 16px;
+    border: 1px solid var(--glass-bg2);
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hover suave (opcional) */
+.mycourses_header:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove fundos brancos internos */
+.mycourses_header * {
+    background: transparent !important;
+}
+
+/* Botões de abas */
+.mycourses_access_tabs .button {
+    background: var(--glass-bg) !important;
+    color: #fff !important;
+    border: 1px solid var(--glass-bg2) !important;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin-right: 8px;
+    transition: all 0.3s ease;
+}
+
+.mycourses_access_tabs .button.active,
+.mycourses_access_tabs .button:hover {
+    background: var(--glass-bg2) !important;
+    transform: translateY(-2px);
+}
+
+/* Inputs de busca */
+.mycourses_header .searchbox input {
+    background: var(--glass-bg) !important;
+    color: #fff !important;
+    border: 1px solid var(--glass-bg2) !important;
+    border-radius: 8px;
+    padding: 8px 12px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.mycourses_header .searchbox input:focus {
+    background: rgba(255, 255, 255, 0.25) !important;
+    outline: none;
+}
+
+/* Selects */
+.mycourses_header select {
+    background: var(--glass-bg) !important;
+    color: #fff !important;
+    border: 1px solid var(--glass-bg2) !important;
+    border-radius: 8px;
+    padding: 8px 12px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.mycourses_header select:focus {
+    background: rgba(255, 255, 255, 0.25) !important;
+    outline: none;
+}
+
+
+/* Fundo principal do menu de perfil */
+.profile_menu {
+    background: var(--glass-bg) !important; /* translúcido */
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-radius: 16px;
+    border: 1px solid var(--glass-bg2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 15px !important;
+   padding:10px;
+}
+
+
+
+/* Remove fundos brancos internos de todos os elementos */
+.profile_menu * {
+    background: transparent !important;
+}
+
+/* Logo do site */
+.profile_menu .site_logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 16px;
+}
+
+/* Itens do menu */
+.profile_menu .menu_items .bp-menu,
+.profile_menu .todos-cursos,
+.profile_menu .inicio {
+    display: flex;
+    align-items:center ;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+/* Hover dos itens do menu */
+.profile_menu .menu_items .bp-menu:hover,
+.profile_menu .todos-cursos:hover,
+.profile_menu .inicio:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+    transform: translateY(-1px);
+}
+
+/* Ícones dentro do menu */
+.profile_menu .menu_items svg {
+    fill: #ffffff;
+}
+
+/* Textos dos itens */
+.profile_menu .menu_items span span:last-child {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Menu inferior (modo escuro, sair) */
+.profile_menu .menu_bottom {
+    margin-top: 16px;
+}
+
+.menu_items .icon {
+  margin-left: -11px !important;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.inicio .vicon-new-window {
+  margin-left: -11px !important;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.profile_menu .menu_bottom .menu_item {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+    background: rgba(255,255,255,0.1) !important;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile_menu .menu_bottom .menu_item:hover {
+    background: rgba(255,255,255,0.25) !important;
+    transform: translateY(-1px);
+}
+
+.profile_menu .menu_bottom .menu_item svg {
+    fill: #ffffff;
+    margin-right: 6px;
+}
+
+
 /* Fundo principal de todos os blocos */
 
 /* ==============================================
