@@ -37,6 +37,14 @@ html, body {
 /* Remove qualquer fundo branco dos elementos principais */
 
 /* Opcional: aplicar glassmorphism em containers principais */
+:root{
+  --glass-bg: rgba(255,255,255,0.12);
+  --glass-bg2: rgba(255,255,255,0.22);
+  --glass-blur: 12px;
+  --glass-border: 1px solid rgba(255,255,255,0.18);
+  --liquid-opacity: 0.45; /* opacidade da camada que receberá o filtro */
+}
+
 /* ==============================================
    📦 CONTAINERS PRINCIPAIS (Wrapper, Sidebar, etc.)
 ============================================== */
@@ -54,7 +62,7 @@ html, body {
     overflow: hidden;
 }
 
-/* Camada de Liquid Glass */
+/* camada visual que o filtro irá distorcer */
 .container::before,
 .wrapper::before,
 .mycourses_header::before,
@@ -62,13 +70,22 @@ html, body {
     content: "";
     position: absolute;
     inset: 0;
-    filter: url(#liquidglass);
-    pointer-events: none;
     z-index: 0;
     border-radius: inherit;
+    pointer-events: none;
+
+    /* fundo levemente com gradiente — isso garante que o filter gere efeito visível */
+    background: linear-gradient(135deg,
+                rgba(255,255,255,0.02),
+                rgba(255,255,255,0.06) 40%,
+                rgba(255,255,255,0.01) 100%);
+    opacity: var(--liquid-opacity);
+
+    /* o filtro SVG */
+    filter: url(#liquidglass);
 }
 
-/* Conteúdo acima da camada */
+/* conteúdo permanece acima da camada */
 .container > *,
 .wrapper > *,
 .mycourses_header > *,
@@ -86,7 +103,7 @@ html, body {
 .wrapper:hover,
 .mycourses_header:hover,
 .vibebp_left_sidebar_wrapper:hover {
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
 }
 
 /* ==============================================
@@ -109,6 +126,7 @@ html, body {
     object-fit: cover;
 }
 
+/* label ativa com pseudo-camada para Liquid Glass (evita distorcer texto) */
 .course_blocks .course_label span.active {
     position: relative;
     z-index: 1;
@@ -117,16 +135,18 @@ html, body {
     padding: 4px 8px;
     border-radius: 8px;
     font-weight: 600;
+    overflow: hidden;
 }
-
 .course_blocks .course_label span.active::before {
     content: "";
     position: absolute;
     inset: 0;
-    filter: url(#liquidglass);
-    pointer-events: none;
-    border-radius: inherit;
     z-index: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(120deg, rgba(255,255,255,0.03), rgba(255,255,255,0.08));
+    opacity: var(--liquid-opacity);
+    filter: url(#liquidglass);
 }
 
 /* Botões */
@@ -142,17 +162,17 @@ html, body {
     transition: all 0.3s ease;
     overflow: hidden;
 }
-
 .course_blocks .course_block_actions .button::before {
     content: "";
     position: absolute;
     inset: 0;
-    filter: url(#liquidglass);
-    pointer-events: none;
-    border-radius: inherit;
     z-index: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.06));
+    opacity: var(--liquid-opacity);
+    filter: url(#liquidglass);
 }
-
 .course_blocks .course_block_actions .button:hover {
     background: var(--glass-bg2) !important;
     transform: translateY(-2px);
@@ -174,20 +194,20 @@ html, body {
     flex-wrap: wrap;
     gap: 16px;
     align-items: center;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
 }
-
 .mycourses_header::before {
     content: "";
     position: absolute;
     inset: 0;
-    filter: url(#liquidglass);
-    pointer-events: none;
-    border-radius: inherit;
     z-index: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(160deg, rgba(255,255,255,0.02), rgba(255,255,255,0.06));
+    opacity: var(--liquid-opacity);
+    filter: url(#liquidglass);
 }
-
 .mycourses_header * {
     background: transparent !important;
 }
@@ -205,17 +225,17 @@ html, body {
     transition: all 0.3s ease;
     overflow: hidden;
 }
-
 .mycourses_access_tabs .button::before {
     content: "";
     position: absolute;
     inset: 0;
-    filter: url(#liquidglass);
-    pointer-events: none;
-    border-radius: inherit;
     z-index: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.06));
+    opacity: var(--liquid-opacity);
+    filter: url(#liquidglass);
 }
-
 .mycourses_access_tabs .button.active,
 .mycourses_access_tabs .button:hover {
     background: var(--glass-bg2) !important;
@@ -237,21 +257,19 @@ html, body {
     transition: all 0.3s ease;
     overflow: hidden;
 }
+.mycourses_header .searchbox input::placeholder { color: rgba(255,255,255,0.7); }
 
+/* Para inputs/selects colocamos uma camada extra (se o browser suportar pseudo em inputs) */
 .mycourses_header .searchbox input::before,
 .mycourses_header select::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    filter: url(#liquidglass);
-    pointer-events: none;
-    border-radius: inherit;
-    z-index: 0;
+  /* nem todo browser aplica ::before em inputs — ok, temos camada nos containers principais */
+  content: "";
+  display: none;
 }
 
 .mycourses_header .searchbox input:focus,
 .mycourses_header select:focus {
-    background: rgba(255, 255, 255, 0.25) !important;
+    background: rgba(255,255,255,0.25) !important;
     outline: none;
 }
 
@@ -266,21 +284,22 @@ html, body {
     -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: 16px;
     border: 1px solid var(--glass-bg2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
     margin: 15px !important;
-    padding: 10px;
+    padding:10px;
     overflow: hidden;
 }
-
 .profile_menu::before {
     content: "";
     position: absolute;
     inset: 0;
-    filter: url(#liquidglass);
-    pointer-events: none;
-    border-radius: inherit;
     z-index: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(140deg, rgba(255,255,255,0.02), rgba(255,255,255,0.06));
+    opacity: var(--liquid-opacity);
+    filter: url(#liquidglass);
 }
 
 .profile_menu * {
@@ -298,63 +317,105 @@ html, body {
 /* Itens do menu */
 .profile_menu .menu_items .bp-menu,
 .profile_menu .todos-cursos,
-.profile_menu .inicio,
-.profile_menu .menu_bottom .menu_item {
+.profile_menu .inicio {
     position: relative;
     z-index: 1;
     display: flex;
-    align-items:center;
+    align-items:center ;
     padding: 8px 12px;
     margin-bottom: 8px;
-    background: rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255,255,255,0.1) !important;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     overflow: hidden;
 }
 
+/* cada item do menu tem sua própria camada para liquid glass (para evitar distorcer texto) */
 .profile_menu .menu_items .bp-menu::before,
 .profile_menu .todos-cursos::before,
-.profile_menu .inicio::before,
-.profile_menu .menu_bottom .menu_item::before {
+.profile_menu .inicio::before {
     content: "";
     position: absolute;
     inset: 0;
-    filter: url(#liquidglass);
-    pointer-events: none;
-    border-radius: inherit;
     z-index: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(120deg, rgba(255,255,255,0.02), rgba(255,255,255,0.06));
+    opacity: calc(var(--liquid-opacity) * 0.9);
+    filter: url(#liquidglass);
 }
 
 /* Hover dos itens do menu */
 .profile_menu .menu_items .bp-menu:hover,
 .profile_menu .todos-cursos:hover,
-.profile_menu .inicio:hover,
-.profile_menu .menu_bottom .menu_item:hover {
-    background: rgba(255, 255, 255, 0.25) !important;
+.profile_menu .inicio:hover {
+    background: rgba(255,255,255,0.25) !important;
     transform: translateY(-1px);
 }
 
-/* Ícones e textos */
-.profile_menu .menu_items svg,
-.profile_menu .menu_bottom .menu_item svg {
+/* Ícones dentro do menu */
+.profile_menu .menu_items svg {
     fill: #ffffff;
 }
 
+/* Textos dos itens */
 .profile_menu .menu_items span span:last-child {
     color: #fff;
     font-weight: 500;
 }
 
+/* Menu inferior (modo escuro, sair) */
 .profile_menu .menu_bottom {
     margin-top: 16px;
 }
 
-.menu_items .icon,
+.menu_items .icon {
+  margin-left: -11px !important;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .inicio .vicon-new-window {
-    margin-left: -11px !important;
-    display: inline-block;
-    vertical-align: middle;
+  margin-left: -11px !important;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.profile_menu .menu_bottom .menu_item {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+    background: rgba(255,255,255,0.1) !important;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.profile_menu .menu_bottom .menu_item::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(120deg, rgba(255,255,255,0.02), rgba(255,255,255,0.06));
+    opacity: calc(var(--liquid-opacity) * 0.9);
+    filter: url(#liquidglass);
+}
+
+.profile_menu .menu_bottom .menu_item:hover {
+    background: rgba(255,255,255,0.25) !important;
+    transform: translateY(-1px);
+}
+
+.profile_menu .menu_bottom .menu_item svg {
+    fill: #ffffff;
+    margin-right: 6px;
 }
 /* Fundo principal de todos os blocos */
 
