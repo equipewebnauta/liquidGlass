@@ -3191,3 +3191,86 @@ display: inline-block;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 12px 40px rgba(31, 38, 135, 0.3);
 }
+
+
+
+/* ========= FORÇA A CAMADA LIQUID GLASS PARA profile_menu.active ========= */
+
+/* garante que a versão "active" mantenha o glass-base (sobrescreve var(--dark)) */
+.vibebp_myprofile .profile_menu.active,
+.profile_menu.active {
+  /* mantém o comportamento de scroll vertical (quando usado) e visual glass */
+  background: var(--glass-bg) !important;       /* força vidro mesmo se houver var(--dark) */
+  border: 1px solid var(--glass-bg2) !important;
+  position: relative;                           /* necessário para ::before */
+  overflow: visible;                            /* para permitir scroll vertical preservar comportamento (abaixo cuidamos do overflow-y) */
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* Se você precisa de scroll vertical quando .active — preserve overflow-y:auto sem "vazar" o efeito:
+   usamos overflow-y:auto e overflow-x:hidden para manter o conteúdo rolável e evitar vazamentos horizontais */
+.vibebp_myprofile .profile_menu.active {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* pseudo-camada "limitada" que recebe o filter — alta especificidade + !important para evitar overrides */
+.vibebp_myprofile .profile_menu.active::before,
+.profile_menu.active::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;   /* garante 100% box com precisão */
+    z-index: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    box-sizing: border-box;
+
+    /* background visível para o filtro distorcer -> necessário para ver o efeito */
+    background: linear-gradient(135deg,
+                rgba(255,255,255,0.02),
+                rgba(255,255,255,0.06) 40%,
+                rgba(255,255,255,0.01) 100%) !important;
+
+    opacity: var(--liquid-opacity, 0.45) !important;
+
+    /* aplica seu filtro (garanta que exista <filter id="liquidglass"> no DOM) */
+    filter: url(#liquidglass) !important;
+
+    /* força camada de composição separada; evita que o pseudo influencie o layout */
+    transform: translateZ(0);
+    will-change: filter, opacity, transform;
+}
+
+/* garante o conteúdo fique acima da camada ::before */
+.vibebp_myprofile .profile_menu.active > *,
+.profile_menu.active > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Alguns temas colocam background direto em seletores mais específicos, então aplicamos regras com maior especificidade */
+/* ex: .vibebp_myprofile .profile_menu.active .site_logo img etc permanecem funcionais */
+.vibebp_myprofile .profile_menu.active,
+.vibebp_myprofile .profile_menu.active .site_logo,
+.vibebp_myprofile .profile_menu.active .menu_items {
+    background: transparent !important; /* conteúdo interno fica transparente, o glass fica por baixo */
+}
+
+/* Se houver regras inline ou muito específicas aplicando background:var(--dark), acima já forçamos glass.
+   Mas, se ainda houver problema, use este fallback com ID do container (se existir) */
+
+/* fallback de muito alta prioridade (use apenas se necessário) */
+/* #some-parent-id .profile_menu.active::before { filter: url(#liquidglass) !important; } */
+
+/* -------- debug helpers (remova quando ok) --------
+   - descomente para visualizar a caixa do ::before e confirmar área do efeito
+*/
+/*
+.profile_menu.active::before {
+  background: rgba(255,0,0,0.08) !important;
+  opacity: 0.6 !important;
+}
+*/
