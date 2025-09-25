@@ -3397,3 +3397,120 @@ a:hover {
   background: var(--glass-bg2) !important;
   transform: translateY(-2px);
 }
+
+
+
+/* ==============================
+   Liquid Glass - Grupos
+   ============================== */
+
+
+/* Cada card de grupo */
+.vibebp_group,
+.vibebp_groups .new_group {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(var(--glass-blur)) !important;
+  -webkit-backdrop-filter: blur(var(--glass-blur)) !important;
+  border-radius: 16px;
+  border: 1px solid var(--glass-bg2);
+ 
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover suave */
+.vibebp_group:hover,
+.vibebp_groups .new_group:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+/* Remove fundos internos */
+.vibebp_group * {
+  background: transparent !important;
+}
+
+/* Avatar do grupo */
+.vibebp_group .group_avatar img,
+.vibebp_groups .new_group i {
+
+  
+  margin: 0 auto 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  color: #fff;
+  font-size: 28px;
+}
+
+/* Nome do grupo */
+.vibebp_group .group_name {
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.95rem;
+  text-align: center;
+  word-break: break-word;
+}
+
+/* Card "Novo grupo" */
+.vibebp_groups .new_group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: #fff;
+}
+.vibebp_groups .new_group:hover i {
+  color: #ffd8b9;
+}
+
+
+/* ==============================
+   Liquid Glass - Filtro de Tipos de Grupo
+   ============================== */
+
+.group_types {
+  display: flex;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 16px;
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(var(--glass-blur)) !important;
+  -webkit-backdrop-filter: blur(var(--glass-blur)) !important;
+  border: 1px solid var(--glass-bg2);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Hover suave no container (opcional) */
+.group_types:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* Cada botão/aba */
+.group_types span {
+  padding: 6px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+/* Estado ativo */
+.group_types span.active {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* Hover nos spans */
+.group_types span:hover {
+  background: rgba(255,255,255,0.18);
+  transform: translateY(-1px);
+}
