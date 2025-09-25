@@ -3999,3 +3999,163 @@ margin:3px !important;
   border-color: #ffd8b9;
 }
 
+
+/* ==============================
+   Liquid Glass - End Block (Cart, Notificações e Avatar)
+   ============================== */
+.end_block {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Carrinho */
+.end_block .vibebp-cart,
+.end_block .vibebp_cart svg {
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+.end_block .vibebp-cart:hover svg {
+  color: #ffd8b9;
+}
+
+/* Tours Wrapper */
+.end_block .tours_wrapper .vicon-help-alt {
+  color: #ffffff;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.end_block .tours_wrapper .vicon-help-alt:hover {
+  color: #ffcea6;
+}
+
+/* Notificações */
+.end_block .notifications .vicon-bell {
+  color: #ffffff;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.end_block .notifications .vicon-bell:hover {
+  color: #ffd8b9;
+}
+
+/* Avatar do usuário */
+.end_block .vibebp_user_avatar {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.end_block .vibebp_user_avatar img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Barra de progresso do perfil */
+.end_block .completeProgress .ReactProgressCircle_circle {
+  stroke: #ffd8b9;
+}
+
+.end_block .completeProgress .ReactProgressCircle_circleBackground {
+  stroke: rgba(255, 255, 255, 0.2);
+}
+
+
+/* ==============================
+   Liquid Glass - Cart Wrapper
+   ============================== */
+.vibebp_cart_wrapper.active {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 16px;
+  width: 320px;
+  max-width: 90%;
+  transition: all 0.3s ease;
+}
+
+/* Header do carrinho */
+.vibebp_cart_wrapper.active .vibebp_cart strong span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Badge */
+.vibebp_cart_wrapper.active .vibebp_cart .badge {
+  background-color: #ffd8b9;
+  color: #000;
+  border-radius: 8px;
+  padding: 2px 6px;
+  font-size: 12px;
+  margin-left: auto;
+}
+
+/* Body do carrinho */
+.vibebp_cart_wrapper.active .vibebp_cart_body {
+  margin-top: 12px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* Mensagem de erro */
+.vibebp_cart_wrapper.active .vbp_error {
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+/* Footer / Botão fechar */
+.vibebp_cart_wrapper.active .vibebp_cart_footer .button {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.vibebp_cart_wrapper.active .vibebp_cart_footer .button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #ffd8b9;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ==============================
+   Liquid Glass - Erro Carrinho
+   ============================== */
+.vbp_error {
+  display: inline-block !important;
+  background: rgba(255, 0, 0, 0.15) !important; /* Fundo avermelhado translúcido */
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 0, 0, 0.4) !important; /* Borda avermelhada suave */
+  color: #ffdddd !important; /* Texto claro */
+  padding: 6px 12px !important;
+  font-size: 14px !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  transition: all 0.3s ease !important;
+}
+
