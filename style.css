@@ -3152,3 +3152,114 @@ a:hover {
   background: rgba(255, 255, 255, 0.35) !important;
 }
 
+
+
+
+/* ==============================
+   Liquid Glass - Coleção
+   ============================== */
+
+/* Bloco principal */
+.open_collection_wrapper {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(var(--glass-blur)) !important;
+  -webkit-backdrop-filter: blur(var(--glass-blur)) !important;
+  border-radius: 16px;
+  border: 1px solid var(--glass-bg2);
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Hover suave */
+.open_collection_wrapper:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+/* Remove fundos internos */
+.open_collection_wrapper * {
+  background: transparent !important;
+}
+
+/* Header com ícones */
+.open_collection_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.open_collection_header .vicon {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.open_collection_header .vicon:hover {
+  color: #ffd8b9;
+}
+
+/* Inputs e textarea */
+.open_collection_wrapper input[type="text"],
+.open_collection_wrapper textarea,
+.open_collection_wrapper .collection_courses_wrapper .control input {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: var(--glass-border) !important;
+  border-radius: 12px !important;
+  padding: 10px !important;
+  color: #fff !important;
+  width: 100%;
+  box-sizing: border-box;
+  backdrop-filter: blur(var(--glass-blur)) !important;
+  -webkit-backdrop-filter: blur(var(--glass-blur)) !important;
+  transition: all 0.3s ease;
+}
+
+.open_collection_wrapper input::placeholder,
+.open_collection_wrapper textarea::placeholder {
+  color: rgba(255,255,255,0.6) !important;
+}
+
+/* Wrapper de cursos adicionados */
+.collection_courses_wrapper .collection_courses,
+.collection_courses_wrapper .searched_courses {
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 10px;
+  margin-top: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+  color: #fff;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+/* Botão de ação */
+.open_collection_wrapper .collection_action_buttons .button.is-primary {
+  background: var(--glass-bg) !important;
+  color: #fff !important;
+  border: var(--glass-border) !important;
+  border-radius: 30px !important;
+  padding: 10px 20px !important;
+  transition: all 0.3s ease;
+}
+
+.open_collection_wrapper .collection_action_buttons .button.is-primary:hover {
+  background: var(--glass-bg2) !important;
+  transform: translateY(-2px);
+}
+
+/* Ícone de pesquisa */
+.collection_courses_wrapper .vicon-search {
+  color: #fff;
+  margin-left: -28px;
+  pointer-events: none;
+}
+
+.collection_courses_wrapper .control {
+   border: none !important; 
+   
+}
