@@ -3942,3 +3942,60 @@ margin:3px !important;
 
 
 
+
+/* ==============================
+   Liquid Glass - WooCommerce Addresses
+   ============================== */
+.vibebp_wc_addresses .vibebp_wc_address {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Títulos das seções */
+.vibebp_wc_addresses .vibebp_wc_address > strong {
+  display: block;
+  margin-bottom: 12px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Campos do endereço - mantém estrutura original */
+.vibebp_wc_addresses .vibebp_wc_address_field {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+/* Ícones de edição */
+.vibebp_wc_addresses .vibebp_wc_address_field .vicon-pencil {
+  margin-left: 6px;
+  color: #ffd8b9;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.vibebp_wc_addresses .vibebp_wc_address_field .vicon-pencil:hover {
+  color: #ffcea6;
+}
+
+/* Inputs */
+.vibebp_wc_addresses .vibebp_wc_address_field input[type="text"] {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 6px 10px;
+  color: #fff;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.vibebp_wc_addresses .vibebp_wc_address_field input[type="text"]:focus {
+  background: rgba(255, 255, 255, 0.18) !important;
+  border-color: #ffd8b9;
+}
+
