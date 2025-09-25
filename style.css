@@ -3629,3 +3629,316 @@ margin:3px !important;
 .table_block table.table .vicon-more:hover {
   color: #ffd8b9;
 }
+
+
+
+
+
+/* ==============================
+   Liquid Glass - Draft.js Editor
+   ============================== */
+
+.vibe_editor {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+/* Hover no editor */
+.vibe_editor:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+/* Área editável */
+.vibe_editor .DraftEditor-editorContainer {
+  background: transparent !important;
+  color: #fff !important;
+  padding: 8px;
+  min-height: 120px;
+  outline: none;
+}
+
+/* Placeholder */
+.vibe_editor .public-DraftEditorPlaceholder-inner {
+  color: rgba(255,255,255,0.5) !important;
+  font-style: italic;
+}
+
+/* Toolbar principal */
+.vibe_editor .draftJsToolbar__toolbar__dNtBH {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 6px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  color: #fff !important;
+}
+
+/* Botões da toolbar */
+.vibe_editor .draftJsToolbar__button__qi1gf {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 4px;
+  color: #fff !important;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover nos botões */
+.vibe_editor .draftJsToolbar__button__qi1gf:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: ghostwhite;
+}
+
+/* Ícones da toolbar */
+.vibe_editor .draftJsToolbar__button__qi1gf svg {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+}
+
+/* Scroll interno suave */
+.vibe_editor .DraftEditor-editorContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.vibe_editor .DraftEditor-editorContainer::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 6px;
+}
+
+.vibe_editor .DraftEditor-editorContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ==============================
+   Liquid Glass - Message Actions
+   ============================== */
+
+.message_actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  margin-top: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Hover no bloco de ações */
+.message_actions:hover {
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+/* Ícones de anexos */
+.message_Attachments a.vicon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover nos ícones */
+.message_Attachments a.vicon:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffd8b9;
+}
+
+/* Botão de enviar mensagem */
+.message_buttons a.button.is-primary {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #fff;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.2s ease;
+}
+
+/* Hover no botão */
+.message_buttons a.button.is-primary:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffd8b9;
+  transform: translateY(-1px);
+}
+
+
+
+/* ==============================
+   Liquid Glass - Message List
+   ============================== */
+
+/* Container da lista */
+.message_list_left {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Cabeçalho da lista */
+.message_list_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+/* Caixa de busca */
+.searchbox {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 6px 10px;
+  flex: 1;
+  margin-right: 8px;
+  transition: all 0.2s ease;
+}
+
+.searchbox.active {
+  background: rgba(255,255,255,0.15);
+}
+
+.searchbox input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+  margin-left: 6px;
+  font-size: 14px;
+}
+
+.searchbox .vicon-search {
+  color: #fff;
+}
+
+/* Select */
+.message_list_head select {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.message_list_head select:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* Checkbox no cabeçalho */
+.message_list_head .checkbox {
+  margin-left: 8px;
+}
+
+/* Mensagens individuais */
+.messages .message_block {
+  display: flex;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.08) !important;
+  border-radius: 14px;
+  padding: 10px;
+  margin-bottom: 8px;
+  transition: all 0.2s ease;
+}
+
+.messages .message_block.active {
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* Avatar da mensagem */
+.message_avatars img.vibebp_avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.2);
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+/* Conteúdo principal da mensagem */
+.message_block_main {
+  flex: 1;
+}
+
+/* Cabeçalho interno da mensagem */
+.message_block_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.message_block_head .datetime span {
+  font-size: 12px;
+  color: #ccc;
+  margin-right: 4px;
+}
+
+/* Ações da mensagem */
+.message_block_head a.vicon {
+  margin-left: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.message_block_head a.vicon:hover {
+  color: #ffd8b9;
+}
+
+/* Texto da mensagem */
+.message {
+  font-size: 14px;
+  color: #fff;
+}
+
+.message_content a {
+  color: #ffd8b9;
+  text-decoration: underline;
+}
+
+.message_content a:hover {
+  color: #ffcea6;
+}
+
+.message_left_right .message_list_left .messages .message_block.active:after {
+  
+     background: transparent !important; 
+  
+}
+
+
+
