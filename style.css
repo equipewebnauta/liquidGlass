@@ -3263,3 +3263,137 @@ a:hover {
    border: none !important; 
    
 }
+
+
+
+/* ==============================
+   Liquid Glass - Formulário de Reunião
+   ============================== */
+
+/* Bloco principal */
+.new_meeting_content.vibebp_form {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(var(--glass-blur)) !important;
+  -webkit-backdrop-filter: blur(var(--glass-blur)) !important;
+  border-radius: 16px;
+  border: 1px solid var(--glass-bg2);
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Hover suave */
+.new_meeting_content.vibebp_form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+/* Remove fundos internos */
+.new_meeting_content.vibebp_form * {
+  background: transparent !important;
+}
+
+/* Campos input, number e textarea */
+.new_meeting_content.vibebp_form input[type="text"],
+.new_meeting_content.vibebp_form input[type="number"],
+.new_meeting_content.vibebp_form textarea,
+.new_meeting_content.vibebp_form select {
+  background: rgba(255,255,255,0.1) !important;
+  border: var(--glass-border) !important;
+  border-radius: 12px !important;
+  padding: 10px !important;
+  color: #fff !important;
+  width: 100%;
+  box-sizing: border-box;
+  backdrop-filter: blur(var(--glass-blur)) !important;
+  -webkit-backdrop-filter: blur(var(--glass-blur)) !important;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.new_meeting_content.vibebp_form input::placeholder,
+.new_meeting_content.vibebp_form textarea::placeholder {
+  color: rgba(255,255,255,0.6) !important;
+}
+
+/* Labels */
+.new_meeting_content.vibebp_form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Editor interno */
+.vibe_zoom_editor .vibe_editor,
+.vibe_editor_elements .vibe_editor_element {
+  background: rgba(255,255,255,0.08) !important;
+  border-radius: 12px;
+  padding: 8px;
+  margin-bottom: 6px;
+}
+
+/* Ícones do editor */
+.vibe_editor_elements .vibe_editor_element .vicon {
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.vibe_editor_elements .vibe_editor_element .vicon:hover {
+  color: #ffd8b9;
+}
+
+/* Campos de data/hora */
+.jitsi_meeting_timings input.form-control.input {
+  background: rgba(255,255,255,0.1) !important;
+  border: var(--glass-border) !important;
+  border-radius: 12px !important;
+  padding: 10px !important;
+  color: #fff !important;
+}
+
+/* Wrapper de compartilhamento */
+.jitsi_meeting_sharing .shared_values {
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 10px;
+  color: #fff;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+/* Botões e selects */
+.new_meeting_content.vibebp_form select {
+  background: rgba(255,255,255,0.1) !important;
+  border: var(--glass-border) !important;
+  border-radius: 12px;
+  padding: 8px 12px;
+  color: #fff;
+  outline: none;
+  width: 100%;
+}
+
+.new_meeting_content.vibebp_form select option {
+  background: #222;
+  color: #fff;
+}
+
+/* Botão final de criar reunião */
+.jitsi_create_form_end .button.is-primary {
+  background: var(--glass-bg) !important;
+  color: #fff !important;
+  border: var(--glass-border) !important;
+  border-radius: 30px !important;
+  padding: 10px 20px !important;
+  transition: all 0.3s ease;
+}
+
+.jitsi_create_form_end .button.is-primary:hover {
+  background: var(--glass-bg2) !important;
+  transform: translateY(-2px);
+}
