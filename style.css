@@ -137,6 +137,10 @@ background: transparent;
     transform: translateY(-2px);
 }
 
+
+
+
+
 /* Fundo principal do cabeçalho dos cursos */
 .mycourses_header {
     background: var(--glass-bg) !important; /* translúcido */
@@ -2970,3 +2974,181 @@ display: inline-block;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 12px 40px rgba(31, 38, 135, 0.3);
 }
+
+
+
+
+/* ===== Efeito Liquid Glass Geral para os cards ===== */
+.bg-card {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-radius: 16px !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* ===== Texto do perfil ===== */
+.vibebp_profile_field {
+    color: #ffffff !important; /* ou ajuste para outra cor */
+    font-size: 16px !important;
+}
+
+/* ===== Títulos ===== */
+.elementor-widget-heading h2,
+.elementor-widget-heading h4 {
+    color: #ffffff !important;
+}
+
+/* ===== Avatar ===== */
+.elementor-widget-member_avatar img {
+    border-radius: 50% !important; /* Deixa redondo */
+    width: 180px !important;
+    height: 180px !important;
+    object-fit: cover !important;
+}
+
+/* ===== Badges ===== */
+.gamification_badges_wrapper img {
+    border-radius: 8px !important;
+}
+
+/* ===== Alert ===== */
+.elementor-alert {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #fff !important;
+    border-left: 4px solid #ffffff !important;
+}
+
+/* ===== Espaçamento interno ===== */
+.e-con-inner {
+    padding: 16px !important;
+}
+
+/* ===== Links do perfil ===== */
+a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+a:hover {
+    text-decoration: underline !important;
+}
+
+/* ===== Ajuste de ícones e imagens ===== */
+.elementor-widget-image img {
+    max-width: 32px !important;
+    height: auto !important;
+}
+
+/* ===== Container do avatar ===== */
+.profile_avatar_wrapper {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-radius: 16px !important;
+    padding: 12px !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+/* ===== Avatar ===== */
+.profile_avatar img {
+    border-radius: 50% !important;
+    width: 180px !important;
+    height: 180px !important;
+    object-fit: cover !important;
+    border: 2px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+/* ===== Ações do avatar (botão) ===== */
+.profile_avatar_actions {
+    margin-top: 12px !important;
+}
+
+.profile_avatar_actions .button.is-info {
+    background: rgba(255, 255, 255, 0.25) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    border-radius: 12px !important;
+    padding: 8px 16px !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.profile_avatar_actions .button.is-info:hover {
+    background: rgba(255, 255, 255, 0.35) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+}
+
+
+.add_new_collection {
+   
+    background: rgba(255, 255, 255, 0.15) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    
+    transition: all 0.3s ease !important;
+}
+
+.add_new_collection:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+    transform: scale(1.1) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+.add_new_collection .vicon-plus {
+    font-size: 24px !important;
+    color: #fff !important;
+}
+
+
+
+
+/* Aplica apenas no bloco específico .vibebp_clp */
+.vibebp_clps .vibebp_clp {
+  background: rgba(255, 255, 255, 0.15) !important; /* Transparência leve */
+  border-radius: 16px !important;                    /* Bordas arredondadas */
+  backdrop-filter: blur(12px) !important;            /* Blur do fundo */
+  -webkit-backdrop-filter: blur(12px) !important;    /* Compatibilidade Safari */
+  border: 1px solid rgba(255, 255, 255, 0.25) !important; /* Borda sutil */
+  padding: 16px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important; /* Sombra suave */
+  overflow: hidden; /* Garante que nada vaze do card */
+  transition: all 0.3s ease;
+}
+
+/* Hover opcional para efeito extra */
+.vibebp_clps .vibebp_clp:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Ajusta imagem interna e link para não quebrar o efeito */
+.vibebp_clps .vibebp_clp img {
+  border-radius: 12px;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.vibebp_clps .vibebp_clp a.custom-btn {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
+  text-decoration: none;
+  border-radius: 30px !important;
+  padding: 5px 10px !important;
+  display: inline-block;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.vibebp_clps .vibebp_clp a.custom-btn:hover {
+  background: rgba(255, 255, 255, 0.35) !important;
+}
+
